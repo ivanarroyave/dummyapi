@@ -28,6 +28,7 @@ public class ServiceSetup {
 
     private void defineDefaultHeader(){
         headers.put("app-id", "63485f907a44048db04b4361");
+        headers.put("Content-Type", "application/json; charset=utf-8");
     }
 
 }

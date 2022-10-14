@@ -148,7 +148,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 13-10-2022 18:30</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 14-10-2022 01:42</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -289,24 +289,155 @@
 
                     <td width="50" class="step-icon">
                         <a name="1"></a>
-                            <span style="margin-left: 20px;"
-                                  class="top-level-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
-                                </span>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1')"
+                               style="display:block">
+                                <i class="bi bi-plus-square imgstepSection1 success-icon"
+                                   style="margin-left: 20px; float:left; padding-right:5px"></i>
+                            </a>
                     </td>
 
                     <td class="step-description-column">
                         <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1')"
+                               style="display:block;">
                                 <span class="top-level-step">
                                                 When he search a specific user by the identification code
                                         </span>
+                            </a>
                             <span class="evidence">
                                 </span>
                         </div>
                     </td>
 
                     <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">001ms</span></td>
+                    <td width="100"><span class="top-level-step">345ms</span></td>
                 </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection1" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="70" class="step-icon">
+                        <a name="1-0"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-0')"
+                               style="display:block">
+                                <i class="bi bi-plus-square imgstepSection1-0 success-icon"
+                                   style="margin-left: 40px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-0')"
+                               style="display:block;">
+                                <span class="nested-step">
+                                                Admin do get
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-step">340ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection1-0" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="90" class="step-icon">
+                        <a name="1-0-0"></a>
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-0-0')"
+                               style="display:block">
+                                <i class="bi bi-plus-square imgstepSection1-0-0 success-icon"
+                                   style="margin-left: 60px; float:left; padding-right:5px"></i>
+                            </a>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-0-0')"
+                               style="display:block;">
+                                <span class="nested-step">
+                                                Admin executes a GET on the resource user/60d0fe4f5311236168a109ca
+                                        </span>
+                            </a>
+                            <span class="evidence">
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-step">338ms</span></td>
+                </tr>
+                    <tr>
+                        <td colspan="5">
+                            <table id="stepSection1-0-0" class="step-table-nested" style="display:none;">
+                <tr class="test-SUCCESS">
+
+                    <td width="110" class="step-icon">
+                        <a name="1-0-0-0"></a>
+                            <span style="margin-left: 80px;"
+                                  class="nested-group-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon ' title='SUCCESS'></i></a>
+                                </span>
+                    </td>
+
+                    <td class="step-description-column">
+                        <div class="step-description">
+                                <span class="nested-group-step">
+                                                GET https://dummyapi.io/data/v1/user/60d0fe4f5311236168a109ca
+                                        </span>
+                            <span class="evidence">
+                                        <span class="piece-of-evidence">
+                <span>
+                        <button type="button" class="btn btn-success btn-sm" data-toggle="collapse"
+                                data-target="#restModal-REST-5">
+                            REST Query
+                        </button>
+                    </span>
+                <!-- Modal -->
+                <div class="rest-query-details">
+                    <div class="collapse multi-collapse" id="restModal-REST-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4>Response</h4>
+                                    <p>URL: https://dummyapi.io/data/v1/user/60d0fe4f5311236168a109ca</p>
+                                    <p>Status code: 200</p>
+                                    <p>Content Type: application/json</p>
+                                    <h4>Request Headers</h4>
+                                    <pre>app-id=63485f907a44048db04b4361<br>Accept=*/*<br>Content-Type=application/json; charset=utf-8</pre>
+                                    <h4>Response Headers</h4>
+                                    <pre>Connection: keep-alive<br>Content-Length: 475<br>Access-Control-Allow-Origin: *<br>Cache-Control: private<br>Content-Type: application/json; charset=utf-8<br>Etag: W/&quot;1db-L9I5hz+AAaUhZ7tQZAtN5tmVtbQ&quot;<br>Function-Execution-Id: 98r2fk2zz8xf<br>Server: Google Frontend<br>Strict-Transport-Security: max-age=31556926<br>X-Cloud-Trace-Context: 6abc2b101be9a173bfd289694d124dd3<br>X-Country-Code: CO<br>Accept-Ranges: bytes<br>Date: Fri, 14 Oct 2022 06:42:36 GMT<br>X-Served-By: cache-bog2260021-BOG<br>X-Cache: MISS<br>X-Cache-Hits: 0<br>X-Timer: S1665729756.815432,VS0,VE220<br>Vary: cookie,need-authorization, x-fh-requested-host, accept-encoding<br>alt-svc: h3=&quot;:443&quot;;ma=86400,h3-29=&quot;:443&quot;;ma=86400,h3-27=&quot;:443&quot;;ma=86400</pre>
+                                <h4>Response Body</h4>
+                                    <pre>{<br>    &quot;id&quot;: &quot;60d0fe4f5311236168a109ca&quot;,<br>    &quot;title&quot;: &quot;ms&quot;,<br>    &quot;firstName&quot;: &quot;Sara&quot;,<br>    &quot;lastName&quot;: &quot;Andersen&quot;,<br>    &quot;picture&quot;: &quot;https://randomuser.me/api/portraits/women/58.jpg&quot;,<br>    &quot;gender&quot;: &quot;female&quot;,<br>    &quot;email&quot;: &quot;sara.andersen@example.com&quot;,<br>    &quot;dateOfBirth&quot;: &quot;1996-04-30T19:26:49.610Z&quot;,<br>    &quot;phone&quot;: &quot;92694011&quot;,<br>    &quot;location&quot;: {<br>        &quot;street&quot;: &quot;9614, SÃ¸ndermarksvej&quot;,<br>        &quot;city&quot;: &quot;Kongsvinger&quot;,<br>        &quot;state&quot;: &quot;Nordjylland&quot;,<br>        &quot;country&quot;: &quot;Denmark&quot;,<br>        &quot;timezone&quot;: &quot;-9:00&quot;<br>    },<br>    &quot;registerDate&quot;: &quot;2021-06-21T21:02:07.374Z&quot;,<br>    &quot;updatedDate&quot;: &quot;2021-06-21T21:02:07.374Z&quot;<br>}</pre>
+                                    <h4>Response Cookies</h4>
+                                    <pre></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                        </span>
+                                </span>
+                        </div>
+                    </td>
+
+                    <td width="130"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step"></span></td>
+                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+
+                            </table>
+                        </td>
+                    </tr>
                 <tr class="test-SUCCESS">
 
                     <td width="50" class="step-icon">
@@ -327,12 +458,12 @@
                     </td>
 
                     <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">001ms</span></td>
+                    <td width="100"><span class="top-level-step">002ms</span></td>
                 </tr>
             <tr class="test-SUCCESS">
                     <td colspan="2"></td>
                 <td width="130"><span class="top-level-step"><em>SUCCESS</em></span></td>
-                <td width="100"><span class="top-level-step"><em>0.01s</em></span></td>
+                <td width="100"><span class="top-level-step"><em>0.36s</em></span></td>
             </tr>
 
         </table>
