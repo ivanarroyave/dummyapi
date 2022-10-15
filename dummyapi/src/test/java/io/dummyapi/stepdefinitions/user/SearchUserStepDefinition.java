@@ -3,16 +3,24 @@ package io.dummyapi.stepdefinitions.user;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.dummyapi.models.user.searchusers.Users;
+import io.dummyapi.models.user.create.UserResponse;
 import io.dummyapi.stepdefinitions.ServiceSetup;
-import java.io.IOException;
+import net.serenitybdd.screenplay.rest.questions.LastResponse;
 import static io.dummyapi.questions.general.ResponseCode.was;
-import static io.dummyapi.questions.general.ReturnIntegerValue.returnIntegerValue;
 import static io.dummyapi.questions.general.SchemaValidator.problems;
-import static io.dummyapi.questions.user.GetUsersQuestion.getUsersQuestion;
+import static io.dummyapi.questions.user.create.UserQuestion.theInformationOfCreatedUser;
+import static io.dummyapi.questions.user.search.GetUserQuestion.theInformationOf;
+import static io.dummyapi.questions.user.search.GetUsersQuestion.theLimitOfUsersPerPageComparedWithUsersQuantityIs;
 import static io.dummyapi.tasks.generictasks.DoGet.doGet;
+import static io.dummyapi.tasks.generictasks.DoPost.doPost;
 import static io.dummyapi.utils.FileUtilities.readFile;
-import static io.dummyapi.utils.MySchemaPaths.SEARCH_USERS_SCHEMA;
+import static io.dummyapi.utils.Json.generateJson;
+import static io.dummyapi.utils.faker.UserFaker.*;
+import static io.dummyapi.utils.faker.UserFaker.EMAIL_DOMAIN;
+import static io.dummyapi.utils.schema.MySchemaPaths.SEARCH_USERS_SCHEMA;
+import static io.dummyapi.utils.schema.MySchemaPaths.SEARCH_USER_SCHEMA;
+import static io.dummyapi.utils.Words.EQUAL;
+import static io.dummyapi.utils.Words.ON_SCREEN;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static org.apache.http.HttpStatus.SC_OK;
@@ -23,15 +31,17 @@ public class SearchUserStepDefinition extends ServiceSetup {
 
     private static final String ACTOR_NAME = "Admin";
     private static final String RESOURCE_USER = "user";
-    private static final String RESOURCE_SPECIFIC_USER = "user/60d0fe4f5311236168a109ca";
+    private static final String RESOURCE_CREATE = "user/create";
+    private static final String RESOURCE_SPECIFIC_USER = "user/%s";
 
-    //Background.
+    private UserResponse userResponse;
+
+    //Scenario: Search all users.
     @Given("the admin user are in the searching section")
     public void theAdminUserAreInTheRightForm() {
         generalSetup(ACTOR_NAME);
     }
 
-    //Scenario: Search all users.
     @When("he search for all users in general")
     public void heSearchForAllUsersInGeneral() {
         theActorInTheSpotlight().attemptsTo(
@@ -42,37 +52,62 @@ public class SearchUserStepDefinition extends ServiceSetup {
     }
 
     @Then("he should see the list of all users in general.")
-    public void heShouldSeeTheListOfAllUsersInGeneral() throws IOException {
-
-        Users users = getUsersQuestion().answeredBy(theActorInTheSpotlight());
-
+    public void heShouldSeeTheListOfAllUsersInGeneral() {
         theActorInTheSpotlight().should(
-                seeThat("The status code ", was(), equalTo(SC_OK)),
+                seeThat("the status code ", was(), equalTo(SC_OK)),
                 seeThat(
-                        "The schema is right ",
+                        "the problems with the schema ",
                         problems().inFile(readFile(SEARCH_USERS_SCHEMA.getValue())).relatedWithSchema(),
                         is(false)
                 ),
-                seeThat("", returnIntegerValue(users.getTotal()), is(99)),
-                seeThat("", returnIntegerValue(users.getTotal()), is(0)),
-                seeThat("", returnIntegerValue(users.getTotal()), is(20))
+                seeThat(
+                        "the limit of users per page compared with user's quantity ",
+                        theLimitOfUsersPerPageComparedWithUsersQuantityIs(), is(EQUAL)
+                )
         );
-
-
     }
 
     //Scenario: Search a user by id.
-    @When("he search a specific user by the identification code")
-    public void heSearchASpecificUserByTheIdentificationCode() {
+    @Given("the admin user are in the searching section with an user in mind")
+    public void theAdminUserAreInTheSearchingSectionWithAnUserInMind() {
+        generalSetup(ACTOR_NAME);
+        theActorInTheSpotlight().wasAbleTo(
+                doPost()
+                        .usingTheResource(RESOURCE_CREATE)
+                        .withHeaders(headers)
+                        .andBodyRequest(
+                                generateJson(
+                                        generateUser(SPANISH_CODE_LANGUAGE, COUNTRY_CODE, EMAIL_DOMAIN)
+                                )
+                        )
+        );
+        userResponse = theInformationOfCreatedUser().answeredBy(theActorInTheSpotlight());
+    }
+
+    @When("he search the specific user by the identification code")
+    public void heSearchTheSpecificUserByTheIdentificationCode() {
         theActorInTheSpotlight().attemptsTo(
                 doGet()
-                        .usingResources(RESOURCE_SPECIFIC_USER)
+                        .usingResources(
+                                String.format(
+                                        RESOURCE_SPECIFIC_USER,
+                                        userResponse.getId()
+                                )
+                        )
                         .withHeaders(headers)
         );
     }
 
     @Then("he should see the specific user information.")
     public void heShouldSeeTheSpecificUserInformation() {
-
+        theActorInTheSpotlight().should(
+                seeThat("the status code ", was(), equalTo(SC_OK)),
+                seeThat(
+                        "the problems with the schema ",
+                        problems().inFile(readFile(SEARCH_USER_SCHEMA.getValue())).relatedWithSchema(),
+                        is(false)
+                ),
+                seeThat("the information of user ", theInformationOf(userResponse), is(ON_SCREEN))
+        );
     }
 }

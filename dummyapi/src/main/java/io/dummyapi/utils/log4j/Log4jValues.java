@@ -1,4 +1,4 @@
-package io.dummyapi.utils;
+package io.dummyapi.utils.log4j;
 
 public enum Log4jValues {
     LOG4J_PROPERTIES_FILE_PATH(System.getProperty("user.dir") + "\\src\\main\\resources\\log4j2.properties");

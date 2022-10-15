@@ -1,6 +1,6 @@
 package io.dummyapi.stepdefinitions;
 
-import static io.dummyapi.utils.Log4jValues.LOG4J_PROPERTIES_FILE_PATH;
+import static io.dummyapi.utils.log4j.Log4jValues.LOG4J_PROPERTIES_FILE_PATH;
 import static net.serenitybdd.screenplay.actors.OnStage.*;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.serenitybdd.screenplay.rest.abilities.CallAnApi;

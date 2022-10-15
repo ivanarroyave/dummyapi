@@ -10,7 +10,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Set;
 import org.apache.log4j.Logger;
 
-import static io.dummyapi.utils.SchemaValidator.getShemaValidationMessage;
+import static io.dummyapi.utils.schema.SchemaValidator.getShemaValidationMessage;
 
 public class SchemaValidator implements Question<Boolean> {
 
@@ -41,7 +41,7 @@ public class SchemaValidator implements Question<Boolean> {
 
         generateLogForValidationMessages();
 
-        return validationMessages.isEmpty();
+        return !validationMessages.isEmpty();
     }
 
     private void generateLogForValidationMessages(){

@@ -1,1 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Search user." skipped="0" tests="2" time="3.56" timestamp="2022-10-14 01:42:32"><testcase name="Search all users."/><testcase name="Search an user by id."/></testsuite>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Search user." skipped="0" tests="2" time="4.54" timestamp="2022-10-15 12:11:00"><testcase name="Search all users."/><testcase name="Search an user by id."/></testsuite>

@@ -1,4 +1,4 @@
-package io.dummyapi.models.user.searchuser;
+package io.dummyapi.models.user.search.searchuser;
 
 public class User {
     private String id;

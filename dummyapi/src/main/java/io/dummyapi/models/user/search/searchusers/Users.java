@@ -1,4 +1,4 @@
-package io.dummyapi.models.user.searchusers;
+package io.dummyapi.models.user.search.searchusers;
 
 import java.util.List;
 

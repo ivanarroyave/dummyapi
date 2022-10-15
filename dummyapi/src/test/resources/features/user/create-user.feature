@@ -6,5 +6,5 @@ Feature: Create user.
   Scenario: Create a normal user.
     Given the admin user are in the creation user section
     When he configure and init the user creation
-    Then he should see tin the system a user according to previous user creation.
+    Then he should see in the system a user according to previous user creation.
 

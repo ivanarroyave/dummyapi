@@ -10,7 +10,7 @@ public class DoDelete implements Task {
     private String resource;
     private Map<String, Object> headers = new HashMap<>();
 
-    public DoDelete usingResources(String resource) {
+    public DoDelete usingTheResource(String resource) {
         this.resource = resource;
         return this;
     }
