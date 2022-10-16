@@ -1,6 +1,7 @@
 package io.dummyapi.utils.schema;
 
 
+import static io.dummyapi.utils.so.AccordingToOperatingSystem.replaceLineSeparatorOfPath;
 import static org.apache.commons.lang3.SystemUtils.USER_DIR;
 
 public enum MySchemaPaths {
@@ -49,6 +50,6 @@ public enum MySchemaPaths {
     }
 
     public String getValue() {
-        return value;
+        return replaceLineSeparatorOfPath(value, "\\");
     }
 }

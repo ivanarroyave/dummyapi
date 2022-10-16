@@ -1,5 +1,7 @@
 package io.dummyapi.utils.log4j;
 
+import static io.dummyapi.utils.so.AccordingToOperatingSystem.replaceLineSeparatorOfPath;
+
 public enum Log4jValues {
     LOG4J_PROPERTIES_FILE_PATH(System.getProperty("user.dir") + "\\src\\main\\resources\\log4j2.properties");
 
@@ -10,6 +12,6 @@ public enum Log4jValues {
     }
 
     public String getValue() {
-        return value;
+        return replaceLineSeparatorOfPath(value, "\\");
     }
 }
