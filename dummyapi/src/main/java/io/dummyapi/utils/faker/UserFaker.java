@@ -31,4 +31,16 @@ public class UserFaker {
 
         return user;
     }
+
+    public static UserBody generateUserWithoutData(){
+        UserBody user = new UserBody();
+        user.setTitle(EMPTY_STRING);
+        user.setFirstName(EMPTY_STRING);
+        user.setLastName(EMPTY_STRING);
+        user.setGender(EMPTY_STRING);
+        user.setEmail(EMPTY_STRING);
+        user.setPhone(EMPTY_STRING);
+
+        return user;
+    }
 }

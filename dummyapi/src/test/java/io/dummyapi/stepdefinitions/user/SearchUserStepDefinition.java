@@ -5,7 +5,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.dummyapi.models.user.create.UserResponse;
 import io.dummyapi.stepdefinitions.ServiceSetup;
-import net.serenitybdd.screenplay.rest.questions.LastResponse;
+
 import static io.dummyapi.questions.general.ResponseCode.was;
 import static io.dummyapi.questions.general.SchemaValidator.problems;
 import static io.dummyapi.questions.user.create.UserQuestion.theInformationOfCreatedUser;
@@ -44,25 +44,19 @@ public class SearchUserStepDefinition extends ServiceSetup {
 
     @When("he search for all users in general")
     public void heSearchForAllUsersInGeneral() {
-        theActorInTheSpotlight().attemptsTo(
-                doGet()
-                        .usingResources(RESOURCE_USER)
-                        .withHeaders(headers)
-        );
+        get(RESOURCE_USER);
     }
 
     @Then("he should see the list of all users in general.")
     public void heShouldSeeTheListOfAllUsersInGeneral() {
+        statusCodeValidation();
+        schemaValidation(SEARCH_USERS_SCHEMA.getValue());
+
         theActorInTheSpotlight().should(
-                seeThat("the status code ", was(), equalTo(SC_OK)),
-                seeThat(
-                        "the problems with the schema ",
-                        problems().inFile(readFile(SEARCH_USERS_SCHEMA.getValue())).relatedWithSchema(),
-                        is(false)
-                ),
                 seeThat(
                         "the limit of users per page compared with user's quantity ",
-                        theLimitOfUsersPerPageComparedWithUsersQuantityIs(), is(EQUAL)
+                        theLimitOfUsersPerPageComparedWithUsersQuantityIs(),
+                        is(EQUAL)
                 )
         );
     }
@@ -80,34 +74,57 @@ public class SearchUserStepDefinition extends ServiceSetup {
                                         generateUser(SPANISH_CODE_LANGUAGE, COUNTRY_CODE, EMAIL_DOMAIN)
                                 )
                         )
+                        .alsoPrintTheLastResponse()
         );
         userResponse = theInformationOfCreatedUser().answeredBy(theActorInTheSpotlight());
     }
 
     @When("he search the specific user by the identification code")
     public void heSearchTheSpecificUserByTheIdentificationCode() {
-        theActorInTheSpotlight().attemptsTo(
-                doGet()
-                        .usingResources(
-                                String.format(
-                                        RESOURCE_SPECIFIC_USER,
-                                        userResponse.getId()
-                                )
-                        )
-                        .withHeaders(headers)
+        get(
+                String.format(
+                        RESOURCE_SPECIFIC_USER,
+                        userResponse.getId()
+                )
         );
     }
 
     @Then("he should see the specific user information.")
     public void heShouldSeeTheSpecificUserInformation() {
+        statusCodeValidation();
+        schemaValidation(SEARCH_USER_SCHEMA.getValue());
+
         theActorInTheSpotlight().should(
-                seeThat("the status code ", was(), equalTo(SC_OK)),
+                seeThat(
+                        "the information of user ",
+                        theInformationOf(userResponse),
+                        is(ON_SCREEN))
+        );
+    }
+
+    //Common methods.
+    private void get(String resource){
+        theActorInTheSpotlight().attemptsTo(
+                doGet()
+                        .usingResources(resource)
+                        .withHeaders(headers)
+                        .alsoPrintTheLastResponse()
+        );
+    }
+
+    private void statusCodeValidation(){
+        theActorInTheSpotlight().should(
+                seeThat("the status code ", was(), equalTo(SC_OK))
+        );
+    }
+
+    private void schemaValidation(String schemaPath){
+        theActorInTheSpotlight().should(
                 seeThat(
                         "the problems with the schema ",
-                        problems().inFile(readFile(SEARCH_USER_SCHEMA.getValue())).relatedWithSchema(),
+                        problems().inFile(readFile(schemaPath)).relatedWithSchema(),
                         is(false)
-                ),
-                seeThat("the information of user ", theInformationOf(userResponse), is(ON_SCREEN))
+                )
         );
     }
 }

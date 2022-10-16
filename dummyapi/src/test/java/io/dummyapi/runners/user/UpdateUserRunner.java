@@ -9,6 +9,7 @@ import org.junit.runner.RunWith;
         snippets = CucumberOptions.SnippetType.CAMELCASE,
         features = {"src/test/resources/features/user/update-user.feature"},
         glue = {"io.dummyapi.stepdefinitions.user"},
+        plugin = {"pretty"},
         tags = ""
 )
 public class UpdateUserRunner {

@@ -44,6 +44,7 @@ public class UpdateUserStepDefinition extends ServiceSetup {
                                         generateUser(SPANISH_CODE_LANGUAGE, COUNTRY_CODE, EMAIL_DOMAIN)
                                 )
                         )
+                        .alsoPrintTheLastResponse()
         );
 
         userResponseFistTime = theInformationOfCreatedUser().answeredBy(theActorInTheSpotlight());
@@ -65,6 +66,7 @@ public class UpdateUserStepDefinition extends ServiceSetup {
                                         generateUser(SPANISH_CODE_LANGUAGE, COUNTRY_CODE, EMAIL_DOMAIN)
                                 )
                         )
+                        .alsoPrintTheLastResponse()
         );
     }
 

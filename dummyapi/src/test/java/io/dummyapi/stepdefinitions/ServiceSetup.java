@@ -11,6 +11,9 @@ public class ServiceSetup {
     private static final String BASE_URL = "https://dummyapi.io/data/v1/";
     protected static HashMap<String, Object> headers = new HashMap<>();
 
+    protected static final String APP_ID = "app-id";
+    protected static final String CONTENT_TYPE = "Content-Type";
+
     protected void generalSetup(String name){
         setUpLog4j2();
         defineDefaultHeader();
@@ -27,8 +30,7 @@ public class ServiceSetup {
     }
 
     private void defineDefaultHeader(){
-        headers.put("app-id", "63485f907a44048db04b4361");
-        headers.put("Content-Type", "application/json; charset=utf-8");
+        headers.put(APP_ID, "63485f907a44048db04b4361");
+        headers.put(CONTENT_TYPE, "application/json; charset=utf-8");
     }
-
 }
