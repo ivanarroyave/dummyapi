@@ -1,0 +1,249 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<result plugin="junit@1153.v1c24f1a_d2553">
+  <suites>
+    <suite>
+      <file>/var/jenkins_home/workspace/LuloPipeline/dummyapi/target/surefire-reports/TEST-io.dummyapi.runners.user.AnExampleOfGeneralExecutorOfTest.xml</file>
+      <name>io.dummyapi.runners.user.AnExampleOfGeneralExecutorOfTest</name>
+      <duration>69.403</duration>
+      <time>69.403</time>
+      <nodeId>19</nodeId>
+      <enclosingBlocks>
+        <string>11</string>
+      </enclosingBlocks>
+      <enclosingBlockNames>
+        <string>Start Testing</string>
+      </enclosingBlockNames>
+      <cases>
+        <case>
+          <duration>10.37</duration>
+          <className>Create user.</className>
+          <testName>Create a normal user.</testName>
+          <skipped>false</skipped>
+          <stdout>
+Scenario: Create a normal user.                                                &amp;amp#27;[90m# src/test/resources/features/user/create-user.feature:9&amp;amp#27;[0m
+  &amp;amp#27;[32mGiven &amp;amp#27;[0m&amp;amp#27;[32mthe admin user are in the creation user section&amp;amp#27;[0m                        &amp;amp#27;[90m# io.dummyapi.stepdefinitions.user.CreateUserStepDefinition.theAdminUserAreInTheCreationUserSection()&amp;amp#27;[0m
+{
+    &quot;id&quot;: &quot;634caa5ab523e525af751092&quot;,
+    &quot;title&quot;: &quot;mr&quot;,
+    &quot;firstName&quot;: &quot;Kesha&quot;,
+    &quot;
+...[truncated 226 chars]...
+When &amp;amp#27;[0m&amp;amp#27;[32mhe configure and init the user creation&amp;amp#27;[0m                                 &amp;amp#27;[90m# io.dummyapi.stepdefinitions.user.CreateUserStepDefinition.heConfigureAndInitTheUserCreation()&amp;amp#27;[0m
+  &amp;amp#27;[32mThen &amp;amp#27;[0m&amp;amp#27;[32mhe should see in the system a user according to previous user creation.&amp;amp#27;[0m &amp;amp#27;[90m# io.dummyapi.stepdefinitions.user.CreateUserStepDefinition.heShouldSeeTinTheSystemAUserAccordingToPreviousUserCreation()&amp;amp#27;[0m
+</stdout>
+          <stderr>SLF4J: Failed to load class &quot;org.slf4j.impl.StaticLoggerBinder&quot;.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+</stderr>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>1.156</duration>
+          <className>Create user.</className>
+          <testName>Try to create a user without data.</testName>
+          <skipped>false</skipped>
+          <stdout>
+Scenario: Try to create a user without data.                                                    &amp;amp#27;[90m# src/test/resources/features/user/create-user.feature:13&amp;amp#27;[0m
+  &amp;amp#27;[32mGiven &amp;amp#27;[0m&amp;amp#27;[32mthe admin user are in the creation user section&amp;amp#27;[0m                                         &amp;amp#27;[90m# io.dummyapi.stepdefinitions.user.CreateUserStepDefinition.theAdminUserAreInTheCreationUserSection()&amp;amp#27;[0m
+{
+    &quot;error&quot;: &quot;BODY_NOT_VALID&quot;,
+    &quot;data&quot;: {
+        
+...[truncated 445 chars]...
+ creation without data&amp;amp#27;[0m                                     &amp;amp#27;[90m# io.dummyapi.stepdefinitions.user.CreateUserStepDefinition.heConfigureAndInitTheUserCreationWithoutData()&amp;amp#27;[0m
+  &amp;amp#27;[32mThen &amp;amp#27;[0m&amp;amp#27;[32mhe should see a system error message that describe a body no valid format for all fields&amp;amp#27;[0m &amp;amp#27;[90m# io.dummyapi.stepdefinitions.user.CreateUserStepDefinition.heShouldSeeASystemErrorMessageThatDescribeABodyNoValidFormatForAllFields()&amp;amp#27;[0m
+</stdout>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>2.902</duration>
+          <className>Delete user.</className>
+          <testName>Delete an user.</testName>
+          <skipped>false</skipped>
+          <stdout>
+Scenario: Delete an user.                                                      &amp;amp#27;[90m# src/test/resources/features/user/delete-user.feature:9&amp;amp#27;[0m
+  &amp;amp#27;[32mGiven &amp;amp#27;[0m&amp;amp#27;[32mthe admin user are in the remove users section&amp;amp#27;[0m                         &amp;amp#27;[90m# io.dummyapi.stepdefinitions.user.DeleteUserStepDefinition.theAdminUserAreInTheRemoveUsersSection()&amp;amp#27;[0m
+{
+    &quot;id&quot;: &quot;634caa5fb523e5127e751097&quot;,
+    &quot;title&quot;: &quot;mr&quot;,
+    &quot;firstName&quot;: &quot;Twanda&quot;,
+    &quot;
+...[truncated 255 chars]...
+&amp;amp#27;[32mWhen &amp;amp#27;[0m&amp;amp#27;[32mhe select an user to delete&amp;amp#27;[0m                                             &amp;amp#27;[90m# io.dummyapi.stepdefinitions.user.DeleteUserStepDefinition.heSelectAnUserToDelete()&amp;amp#27;[0m
+  &amp;amp#27;[32mThen &amp;amp#27;[0m&amp;amp#27;[32mhe should see that the selected user is really removed from the system.&amp;amp#27;[0m &amp;amp#27;[90m# io.dummyapi.stepdefinitions.user.DeleteUserStepDefinition.heShouldSeeThatTheSelectedUserIsReallyRemovedFromTheSystem()&amp;amp#27;[0m
+</stdout>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.646</duration>
+          <className>Delete user.</className>
+          <testName>Delete an user - App-id not exists in header configuration.</testName>
+          <skipped>false</skipped>
+          <stdout>
+Scenario: Delete an user - App-id not exists in header configuration. &amp;amp#27;[90m# src/test/resources/features/user/delete-user.feature:13&amp;amp#27;[0m
+  &amp;amp#27;[32mGiven &amp;amp#27;[0m&amp;amp#27;[32mthe admin user are in the remove users section&amp;amp#27;[0m                &amp;amp#27;[90m# io.dummyapi.stepdefinitions.user.DeleteUserStepDefinition.theAdminUserAreInTheRemoveUsersSection()&amp;amp#27;[0m
+{
+    &quot;error&quot;: &quot;APP_ID_NOT_EXIST&quot;
+}
+  &amp;amp#27;[32mWhen &amp;amp#27;[0m&amp;amp#27;[32mthe manager user proceed to delete the user&amp;amp#27;[0m                    &amp;amp#27;[90m# io.dummyapi.stepdefinitions.user.DeleteUserStepDefinition.theManagerUserProceedToDeleteTheUser()&amp;amp#27;[0m
+  &amp;amp#27;[32mThen &amp;amp#27;[0m&amp;amp#27;[32mhe should see an error type named &amp;amp#27;[0m&amp;amp#27;[32m&amp;amp#27;[1m&quot;APP_ID_NOT_EXIST&quot;&amp;amp#27;[0m           &amp;amp#27;[90m# io.dummyapi.stepdefinitions.user.DeleteUserStepDefinition.heShouldSeeAnErrorTypeNamed(java.lang.String)&amp;amp#27;[0m
+</stdout>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.878</duration>
+          <className>Delete user.</className>
+          <testName>Delete an user - App-id missing in header configuration.</testName>
+          <skipped>false</skipped>
+          <stdout>
+Scenario: Delete an user - App-id missing in header configuration. &amp;amp#27;[90m# src/test/resources/features/user/delete-user.feature:17&amp;amp#27;[0m
+  &amp;amp#27;[32mGiven &amp;amp#27;[0m&amp;amp#27;[32mthe admin user are in the remove users section&amp;amp#27;[0m             &amp;amp#27;[90m# io.dummyapi.stepdefinitions.user.DeleteUserStepDefinition.theAdminUserAreInTheRemoveUsersSection()&amp;amp#27;[0m
+{
+    &quot;error&quot;: &quot;APP_ID_MISSING&quot;
+}
+  &amp;amp#27;[32mWhen &amp;amp#27;[0m&amp;amp#27;[32mthe manager user proceed to delete an user&amp;amp#27;[0m                  &amp;amp#27;[90m# io.dummyapi.stepdefinitions.user.DeleteUserStepDefinition.theManagerUserProceedToDeleteAnUser()&amp;amp#27;[0m
+  &amp;amp#27;[32mThen &amp;amp#27;[0m&amp;amp#27;[32mhe should see an error type named like &amp;amp#27;[0m&amp;amp#27;[32m&amp;amp#27;[1m&quot;APP_ID_MISSING&quot;&amp;amp#27;[0m     &amp;amp#27;[90m# io.dummyapi.stepdefinitions.user.DeleteUserStepDefinition.heShouldSeeAnErrorTypeNamedLike(java.lang.String)&amp;amp#27;[0m
+</stdout>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.446</duration>
+          <className>Delete user.</className>
+          <testName>Delete a user with an invalid identification.</testName>
+          <skipped>false</skipped>
+          <stdout>
+Scenario: Delete a user with an invalid identification.                           &amp;amp#27;[90m# src/test/resources/features/user/delete-user.feature:21&amp;amp#27;[0m
+  &amp;amp#27;[32mGiven &amp;amp#27;[0m&amp;amp#27;[32mthe admin user are in the remove users section&amp;amp#27;[0m                            &amp;amp#27;[90m# io.dummyapi.stepdefinitions.user.DeleteUserStepDefinition.theAdminUserAreInTheRemoveUsersSection()&amp;amp#27;[0m
+{
+    &quot;error&quot;: &quot;PARAMS_NOT_VALID&quot;
+}
+  &amp;amp#27;[32mWhen &amp;amp#27;[0m&amp;amp#27;[32mthe ma
+...[truncated 22 chars]...
+delete an user using an invalid identification&amp;amp#27;[0m &amp;amp#27;[90m# io.dummyapi.stepdefinitions.user.DeleteUserStepDefinition.theManagerUserProceedToDeleteAnUserUsingAnInvalidIdentification()&amp;amp#27;[0m
+  &amp;amp#27;[32mThen &amp;amp#27;[0m&amp;amp#27;[32mhe should see an error reference to &amp;amp#27;[0m&amp;amp#27;[32m&amp;amp#27;[1m&quot;PARAMS_NOT_VALID&quot;&amp;amp#27;[0m                     &amp;amp#27;[90m# io.dummyapi.stepdefinitions.user.DeleteUserStepDefinition.heShouldSeeAnErrorReferenceTo(java.lang.String)&amp;amp#27;[0m
+</stdout>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>2.919</duration>
+          <className>Delete user.</className>
+          <testName>Delete a user with an identification deleted previously.</testName>
+          <skipped>false</skipped>
+          <stdout>
+Scenario: Delete a user with an identification deleted previously.            &amp;amp#27;[90m# src/test/resources/features/user/delete-user.feature:25&amp;amp#27;[0m
+  &amp;amp#27;[32mGiven &amp;amp#27;[0m&amp;amp#27;[32mthe admin user are in the remove users section&amp;amp#27;[0m                        &amp;amp#27;[90m# io.dummyapi.stepdefinitions.user.DeleteUserStepDefinition.theAdminUserAreInTheRemoveUsersSection()&amp;amp#27;[0m
+{
+    &quot;id&quot;: &quot;634caa63b523e5013c75109f&quot;,
+    &quot;title&quot;: &quot;mr&quot;,
+    &quot;firstName&quot;: &quot;Robby&quot;,
+    &quot;la
+...[truncated 349 chars]...
+ceed to delete an user that previously was deleted&amp;amp#27;[0m &amp;amp#27;[90m# io.dummyapi.stepdefinitions.user.DeleteUserStepDefinition.theManagerUserProceedToDeleteAnUserThatPreviouslyWasDeleted()&amp;amp#27;[0m
+  &amp;amp#27;[32mThen &amp;amp#27;[0m&amp;amp#27;[32mhe should see an error type reference to &amp;amp#27;[0m&amp;amp#27;[32m&amp;amp#27;[1m&quot;RESOURCE_NOT_FOUND&quot;&amp;amp#27;[0m          &amp;amp#27;[90m# io.dummyapi.stepdefinitions.user.DeleteUserStepDefinition.heShouldSeeAnErrorTypeReferenceTo(java.lang.String)&amp;amp#27;[0m
+</stdout>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.472</duration>
+          <className>Delete user.</className>
+          <testName>Try to delete some user without user identification.</testName>
+          <skipped>false</skipped>
+          <stdout>
+Scenario: Try to delete some user without user identification.                   &amp;amp#27;[90m# src/test/resources/features/user/delete-user.feature:29&amp;amp#27;[0m
+  &amp;amp#27;[32mGiven &amp;amp#27;[0m&amp;amp#27;[32mthe admin user are in the remove users section&amp;amp#27;[0m                           &amp;amp#27;[90m# io.dummyapi.stepdefinitions.user.DeleteUserStepDefinition.theAdminUserAreInTheRemoveUsersSection()&amp;amp#27;[0m
+{
+    &quot;error&quot;: &quot;PATH_NOT_FOUND&quot;
+}
+  &amp;amp#27;[32mWhen &amp;amp#27;[0m&amp;amp#27;[32mthe manage
+...[truncated 23 chars]...
+e a user but without user identification&amp;amp#27;[0m &amp;amp#27;[90m# io.dummyapi.stepdefinitions.user.DeleteUserStepDefinition.theManagerUserProceedToDeleteAUserButWithoutUserIdentification()&amp;amp#27;[0m
+  &amp;amp#27;[32mThen &amp;amp#27;[0m&amp;amp#27;[32mhe should see a message related to error type &amp;amp#27;[0m&amp;amp#27;[32m&amp;amp#27;[1m&quot;PATH_NOT_FOUND&quot;&amp;amp#27;[0m            &amp;amp#27;[90m# io.dummyapi.stepdefinitions.user.DeleteUserStepDefinition.heShouldSeeAMessageRelatedToErrorType(java.lang.String)&amp;amp#27;[0m
+</stdout>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.587</duration>
+          <className>Search user.</className>
+          <testName>Search all users.</testName>
+          <skipped>false</skipped>
+          <stdout>
+Scenario: Search all users.                            &amp;amp#27;[90m# src/test/resources/features/user/search-user.feature:6&amp;amp#27;[0m
+  &amp;amp#27;[32mGiven &amp;amp#27;[0m&amp;amp#27;[32mthe admin user are in the searching section&amp;amp#27;[0m    &amp;amp#27;[90m# io.dummyapi.stepdefinitions.user.SearchUserStepDefinition.theAdminUserAreInTheRightForm()&amp;amp#27;[0m
+{
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: &quot;60d0fe4f5311236168a109ca&quot;,
+            &quot;title&quot;: &quot;ms&quot;,
+            &quot;firstName&quot;: &quot;Sara&quot;,
+            &quot;las
+...[truncated 4664 chars]...
+ }
+    ],
+    &quot;total&quot;: 285,
+    &quot;page&quot;: 0,
+    &quot;limit&quot;: 20
+}
+  &amp;amp#27;[32mWhen &amp;amp#27;[0m&amp;amp#27;[32mhe search for all users in general&amp;amp#27;[0m              &amp;amp#27;[90m# io.dummyapi.stepdefinitions.user.SearchUserStepDefinition.heSearchForAllUsersInGeneral()&amp;amp#27;[0m
+  &amp;amp#27;[32mThen &amp;amp#27;[0m&amp;amp#27;[32mhe should see the list of all users in general.&amp;amp#27;[0m &amp;amp#27;[90m# io.dummyapi.stepdefinitions.user.SearchUserStepDefinition.heShouldSeeTheListOfAllUsersInGeneral()&amp;amp#27;[0m
+</stdout>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>2.529</duration>
+          <className>Search user.</className>
+          <testName>Search an user by id.</testName>
+          <skipped>false</skipped>
+          <stdout>
+Scenario: Search an user by id.                                          &amp;amp#27;[90m# src/test/resources/features/user/search-user.feature:11&amp;amp#27;[0m
+{
+    &quot;id&quot;: &quot;634caa68b523e546287510b4&quot;,
+    &quot;title&quot;: &quot;mr&quot;,
+    &quot;firstName&quot;: &quot;Tashina&quot;,
+    &quot;lastName&quot;: &quot;DuBuque&quot;,
+    &quot;gender&quot;: &quot;male&quot;,
+    &quot;email&quot;: &quot;elvin.bashirian@lulo.com&quot;,
+    &quot;phone&quot;: &quot;1-682-567-1624&quot;,
+    &quot;registerDate&quot;: &quot;2022-10-17T01:05:44.625Z&quot;,
+    &quot;updatedDate&quot;: &quot;2022-10-17T01:05:44.625Z&quot;
+}
+  &amp;amp#27;[32mGiven &amp;amp#27;[0m&amp;amp#27;[3
+...[truncated 513 chars]...
+25Z&quot;
+}
+  &amp;amp#27;[32mWhen &amp;amp#27;[0m&amp;amp#27;[32mhe search the specific user by the identification code&amp;amp#27;[0m            &amp;amp#27;[90m# io.dummyapi.stepdefinitions.user.SearchUserStepDefinition.heSearchTheSpecificUserByTheIdentificationCode()&amp;amp#27;[0m
+  &amp;amp#27;[32mThen &amp;amp#27;[0m&amp;amp#27;[32mhe should see the specific user information.&amp;amp#27;[0m                      &amp;amp#27;[90m# io.dummyapi.stepdefinitions.user.SearchUserStepDefinition.heShouldSeeTheSpecificUserInformation()&amp;amp#27;[0m
+</stdout>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>22.901</duration>
+          <className>Update user.</className>
+          <testName>Update a normal user using all fields.</testName>
+          <skipped>false</skipped>
+          <stdout>
+Scenario: Update a normal user using all fields.                                   &amp;amp#27;[90m# src/test/resources/features/user/update-user.feature:6&amp;amp#27;[0m
+{
+    &quot;id&quot;: &quot;634caa7eb523e5ca447510bb&quot;,
+    &quot;title&quot;: &quot;mr&quot;,
+    &quot;firstName&quot;: &quot;Vivan&quot;,
+    &quot;lastName&quot;: &quot;Collier&quot;,
+    &quot;gender&quot;: &quot;male&quot;,
+    &quot;email&quot;: &quot;damion.okon@lulo.com&quot;,
+    &quot;phone&quot;: &quot;(424) 614-2566&quot;,
+    &quot;registerDate&quot;: &quot;2022-10-17T01:06:06.997Z&quot;,
+    &quot;updatedDate&quot;: &quot;2022-10-17T01:06:06.997Z&quot;
+}
+  &amp;amp#27;[32mGiven &amp;amp#27;[0m&amp;amp#27
+...[truncated 567 chars]...
+ configure the new information and init the user updating&amp;amp#27;[0m                 &amp;amp#27;[90m# io.dummyapi.stepdefinitions.user.UpdateUserStepDefinition.heConfigureTheNewInformationAndInitTheUserUpdating()&amp;amp#27;[0m
+  &amp;amp#27;[32mThen &amp;amp#27;[0m&amp;amp#27;[32mhe should see the user information according to previous user modification.&amp;amp#27;[0m &amp;amp#27;[90m# io.dummyapi.stepdefinitions.user.UpdateUserStepDefinition.heShouldSeeTheUserInformationAccordingToPreviousUserModification()&amp;amp#27;[0m
+</stdout>
+          <failedSince>0</failedSince>
+        </case>
+      </cases>
+    </suite>
+  </suites>
+  <duration>69.403</duration>
+  <skipOldReports>false</skipOldReports>
+  <keepLongStdio>false</keepLongStdio>
+</result>

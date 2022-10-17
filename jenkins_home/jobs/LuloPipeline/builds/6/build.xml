@@ -1,0 +1,190 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-build plugin="workflow-job@1239.v71b_b_a_124a_725">
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause>
+            <userId>admin</userId>
+          </hudson.model.Cause_-UserIdCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <org.jenkinsci.plugins.workflow.libs.LibrariesAction plugin="pipeline-groovy-lib@612.v84da_9c54906d">
+      <libraries/>
+    </org.jenkinsci.plugins.workflow.libs.LibrariesAction>
+    <hudson.plugins.git.util.BuildData plugin="git@4.12.1">
+      <buildsByBranchName>
+        <entry>
+          <string>refs/remotes/origin/main</string>
+          <hudson.plugins.git.util.Build>
+            <marked plugin="git-client@3.12.1">
+              <sha1>ed4f4833550e079909d2224273dbbbe1d75f1782</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>refs/remotes/origin/main</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </marked>
+            <revision reference="../marked"/>
+            <hudsonBuildNumber>6</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+      </buildsByBranchName>
+      <lastBuild reference="../buildsByBranchName/entry/hudson.plugins.git.util.Build"/>
+      <remoteUrls>
+        <string>https://gitlab.com/ID2A/dummyapi.git</string>
+      </remoteUrls>
+    </hudson.plugins.git.util.BuildData>
+    <org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState plugin="workflow-scm-step@400.v6b_89a_1317c9a_">
+      <revisionStates>
+        <entry>
+          <string>git https://gitlab.com/ID2A/dummyapi.git</string>
+          <hudson.scm.SCMRevisionState_-None/>
+        </entry>
+      </revisionStates>
+    </org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState>
+    <org.jenkinsci.plugins.workflow.cps.EnvActionImpl plugin="workflow-cps@2802.v5ea_628154b_c2">
+      <env class="tree-map"/>
+    </org.jenkinsci.plugins.workflow.cps.EnvActionImpl>
+    <hudson.tasks.Fingerprinter_-FingerprintAction>
+      <record>
+        <entry>
+          <string>io/dummyapi/dummyapi/1.0-SNAPSHOT/dummyapi-1.0-SNAPSHOT.pom</string>
+          <string>8668b17645a7d0dd7a9c1ff099fa6175</string>
+        </entry>
+      </record>
+    </hudson.tasks.Fingerprinter_-FingerprintAction>
+    <hudson.tasks.junit.TestResultAction plugin="junit@1153.v1c24f1a_d2553">
+      <descriptions class="concurrent-hash-map"/>
+      <failCount>0</failCount>
+      <skipCount>0</skipCount>
+      <totalCount>11</totalCount>
+      <healthScaleFactor>1.0</healthScaleFactor>
+      <testData/>
+    </hudson.tasks.junit.TestResultAction>
+    <org.jenkinsci.plugins.pipeline.maven.publishers.MavenReport plugin="pipeline-maven@1205.vceea_7b_972817"/>
+    <htmlpublisher.HtmlPublisherTarget_-HTMLBuildAction plugin="htmlpublisher@1.31">
+      <actualHtmlPublisherTarget>
+        <reportName>Serenity</reportName>
+        <reportDir>dummyapi/target/site/serenity</reportDir>
+        <reportFiles>index.html</reportFiles>
+        <alwaysLinkToLastBuild>true</alwaysLinkToLastBuild>
+        <keepAll>true</keepAll>
+        <allowMissing>false</allowMissing>
+      </actualHtmlPublisherTarget>
+      <outer-class reference="../actualHtmlPublisherTarget"/>
+      <wrapperChecksum>ac7adf498b7db6ad6a8c36c0861a7fcc41344065</wrapperChecksum>
+      <outer-class defined-in="htmlpublisher.HtmlPublisherTarget$HTMLBuildAction" reference="../actualHtmlPublisherTarget"/>
+    </htmlpublisher.HtmlPublisherTarget_-HTMLBuildAction>
+  </actions>
+  <queueId>11</queueId>
+  <timestamp>1665974829077</timestamp>
+  <startTime>1665974829103</startTime>
+  <result>SUCCESS</result>
+  <duration>153485</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
+    <result>SUCCESS</result>
+    <script>#!/usr/bin/env groovy
+node() {
+  
+    try {
+        stage(&apos;Prepare code&apos;) {
+		    git url: &apos;https://gitlab.com/ID2A/dummyapi.git&apos;, branch: &apos;main&apos;
+        }
+        
+        stage(&apos;Start Testing&apos;){
+        	withMaven(maven: &apos;Maven 3.8.6&apos;) {
+        	    dir(&quot;${env.WORKSPACE}/dummyapi&quot;){
+                    sh &quot;mvn clean test -Dtest=AnExampleOfGeneralExecutorOfTest serenity:aggregate&quot;
+                }
+            }
+        }
+
+        currentBuild.result = &quot;SUCCESS&quot;
+        
+    } catch (e) {
+        // If there was an exception thrown, the build failed
+        currentBuild.result = &quot;FAILED&quot;
+        throw e
+        
+    } finally {
+        publishReport();
+    }
+}
+
+def publishReport(){
+       publishHTML(target: [
+        reportName : &apos;Serenity&apos;,
+        reportDir:   &apos;dummyapi/target/site/serenity&apos;,
+        reportFiles: &apos;index.html&apos;,
+        keepAll:     true,
+        alwaysLinkToLastBuild: true,
+        allowMissing: false
+    ])
+}
+</script>
+    <loadedScripts class="map"/>
+    <durabilityHint>MAX_SURVIVABILITY</durabilityHint>
+    <timings class="concurrent-hash-map">
+      <entry>
+        <string>flowNode</string>
+        <long>548639325</long>
+      </entry>
+      <entry>
+        <string>classLoad</string>
+        <long>11277542</long>
+      </entry>
+      <entry>
+        <string>run</string>
+        <long>5384456753</long>
+      </entry>
+      <entry>
+        <string>parse</string>
+        <long>21517233</long>
+      </entry>
+      <entry>
+        <string>saveProgram</string>
+        <long>4562041276</long>
+      </entry>
+    </timings>
+    <sandbox>true</sandbox>
+    <iota>26</iota>
+    <head>1:26</head>
+    <done>true</done>
+    <resumeBlocked>false</resumeBlocked>
+  </execution>
+  <completed>true</completed>
+  <checkouts class="hudson.util.PersistedList">
+    <org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+      <scm class="hudson.plugins.git.GitSCM" plugin="git@4.12.1">
+        <configVersion>2</configVersion>
+        <userRemoteConfigs>
+          <hudson.plugins.git.UserRemoteConfig>
+            <url>https://gitlab.com/ID2A/dummyapi.git</url>
+          </hudson.plugins.git.UserRemoteConfig>
+        </userRemoteConfigs>
+        <branches class="singleton-list">
+          <hudson.plugins.git.BranchSpec>
+            <name>*/main</name>
+          </hudson.plugins.git.BranchSpec>
+        </branches>
+        <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+        <submoduleCfg class="empty-list"/>
+        <extensions>
+          <hudson.plugins.git.extensions.impl.LocalBranch>
+            <localBranch>main</localBranch>
+          </hudson.plugins.git.extensions.impl.LocalBranch>
+        </extensions>
+      </scm>
+      <node></node>
+      <workspace>/var/jenkins_home/workspace/LuloPipeline</workspace>
+      <changelogFile>/var/jenkins_home/jobs/LuloPipeline/builds/6/changelog2988397181727561983.xml</changelogFile>
+      <pollingBaseline class="hudson.scm.SCMRevisionState$None" reference="../../../actions/org.jenkinsci.plugins.workflow.steps.scm.MultiSCMRevisionState/revisionStates/entry/hudson.scm.SCMRevisionState_-None"/>
+    </org.jenkinsci.plugins.workflow.job.WorkflowRun_-SCMCheckout>
+  </checkouts>
+</flow-build>

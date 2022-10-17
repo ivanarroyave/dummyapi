@@ -1,0 +1,7 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Create user.","Try to create a user without data.","SUCCESS","2022-10-17T02:47:47.605263Z[Etc/UTC]","0.0","1.35"
+"Delete user.","Delete an user.","SUCCESS","2022-10-17T02:47:48.982538Z[Etc/UTC]","0.0","1.86"
+"Delete user.","Delete an user - App-id missing in header configuration.","SUCCESS","2022-10-17T02:47:51.317476Z[Etc/UTC]","0.0","1.47"
+"Delete user.","Delete a user with an identification deleted previously.","SUCCESS","2022-10-17T02:47:53.43608Z[Etc/UTC]","0.0","1.52"
+"Search user.","Search an user by id.","SUCCESS","2022-10-17T02:47:56.472639Z[Etc/UTC]","0.0","1.7"
+"Update user.","Update a normal user using all fields.","SUCCESS","2022-10-17T02:47:58.188387Z[Etc/UTC]","0.0","1.86"
