@@ -13,20 +13,11 @@ pipeline {
 	
     stages {
 		stage("build") {
-			when {
-				anyOf {
-					branch 'main'; branch 'feature/*'
-				}
-			}
             steps {		
 				sh "mvn clean compile"
             }
         }
         stage("test") {
-			when { 
-				branch 'main' 
-			}
-            
             steps {
 				sh "mvn clean test -Dtest=AnExampleOfGeneralExecutorOfTest serenity:aggregate"
             }
