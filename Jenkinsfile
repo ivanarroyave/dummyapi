@@ -20,7 +20,7 @@ pipeline {
 			}
 			post {
                 always {
-					emailext attachLog: true, body: 'The build of ${currentBuild.fullDisplayName} has result ${currentBuild.result}', subject: 'ENTREGA - EJECUCIÓN BUILD - ${NOMBRE_PROYECTO}', to: 'ddario696@gmail'
+					emailext attachLog: true, body: 'The build of ${currentBuild.fullDisplayName} has result ${currentBuild.result}', subject: 'ENTREGA - EJECUCIÓN BUILD - ${NOMBRE_PROYECTO}', to: 'ddario696@gmail.com'
                 }
             }
         }
@@ -32,7 +32,7 @@ pipeline {
 			}
 			post {
                 always {
-					emailext attachLog: true, body: 'The build of ${currentBuild.fullDisplayName} has result ${currentBuild.result}', subject: 'ENTREGA - EJECUCIÓN BUILD - ${NOMBRE_PROYECTO}', to: 'ddario696@gmail'
+					emailext attachLog: true, body: 'The build of ${currentBuild.fullDisplayName} has result ${currentBuild.result}', subject: 'ENTREGA - EJECUCIÓN BUILD - ${NOMBRE_PROYECTO}', to: 'ddario696@gmail.com'
                 }
             }
         }
