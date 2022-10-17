@@ -19,7 +19,7 @@ pipeline {
 					
 					 publishHTML(target: [
 						reportName : 'Serenity bdd report',
-						reportDir:   '${env.WORKSPACE}/dummyapi/target/site/serenity',
+						reportDir:   'target/site/serenity',
 						reportFiles: 'index.html',
 						keepAll:     true,
 						alwaysLinkToLastBuild: true,
