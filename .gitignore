@@ -43,3 +43,4 @@ hs_err_pid*
 #Jenkins
 */jenkins_home/
 /jenkins_home/
+*/dummyapi/jenkins_home/
