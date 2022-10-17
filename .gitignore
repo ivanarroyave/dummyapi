@@ -39,3 +39,6 @@ hs_err_pid*
 
 #Serenity
 */target/
+
+#Jenkins
+*/jenkins_home
