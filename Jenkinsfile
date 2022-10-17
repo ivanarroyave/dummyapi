@@ -13,11 +13,6 @@ pipeline {
 	
     stages {
 		stage("build") {
-			when {
-				anyOf {
-					branch 'main'; branch '*/feature/*'
-				}
-			}
 			steps {	
 				dir("${env.WORKSPACE}/dummyapi"){
 					sh "mvn clean compile"
@@ -30,9 +25,6 @@ pipeline {
             }
         }
         stage("test") {
-			when { 
-				branch 'main' 
-			}
             steps {		
 				dir("${env.WORKSPACE}/dummyapi"){
 					sh "mvn clean test -Dtest=AnExampleOfGeneralExecutorOfTest serenity:aggregate"
