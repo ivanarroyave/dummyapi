@@ -14,12 +14,16 @@ pipeline {
     stages {
 		stage("build") {
 			steps {	
-				sh "mvn clean compile"
+				dir("${env.WORKSPACE}/dummyapi"){
+					sh "mvn clean compile"
+				}
 			}
         }
         stage("test") {
             steps {		
-				sh "mvn clean test -Dtest=AnExampleOfGeneralExecutorOfTest serenity:aggregate"
+				dir("${env.WORKSPACE}/dummyapi"){
+					sh "mvn clean test -Dtest=AnExampleOfGeneralExecutorOfTest serenity:aggregate"
+				}
 			}
         }
     }
