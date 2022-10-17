@@ -23,6 +23,11 @@ pipeline {
 					sh "mvn clean compile"
 				}
 			}
+			post {
+                always {
+					emailext attachLog: true, body: 'The build of ${currentBuild.fullDisplayName} has result ${currentBuild.result}', subject: 'ENTREGA - EJECUCIÓN BUILD - ${NOMBRE_PROYECTO}', to: 'ddario696@gmail'
+                }
+            }
         }
         stage("test") {
 			when { 
@@ -33,6 +38,11 @@ pipeline {
 					sh "mvn clean test -Dtest=AnExampleOfGeneralExecutorOfTest serenity:aggregate"
 				}
 			}
+			post {
+                always {
+					emailext attachLog: true, body: 'The build of ${currentBuild.fullDisplayName} has result ${currentBuild.result}', subject: 'ENTREGA - EJECUCIÓN BUILD - ${NOMBRE_PROYECTO}', to: 'ddario696@gmail'
+                }
+            }
         }
     }
 }

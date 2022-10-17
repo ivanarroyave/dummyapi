@@ -40,9 +40,6 @@
       </userRemoteConfigs>
       <branches>
         <hudson.plugins.git.BranchSpec>
-          <name>*/main</name>
-        </hudson.plugins.git.BranchSpec>
-        <hudson.plugins.git.BranchSpec>
           <name>*/feature/*</name>
         </hudson.plugins.git.BranchSpec>
       </branches>
