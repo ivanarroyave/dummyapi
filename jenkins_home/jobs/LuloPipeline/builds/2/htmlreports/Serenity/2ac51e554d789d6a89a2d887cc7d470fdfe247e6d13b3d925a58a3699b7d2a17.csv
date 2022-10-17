@@ -1,6 +1,0 @@
-"Story","Title","Result","Date","Stability","Duration (s)"
-"Create user.","Create a normal user.","SUCCESS","2022-10-17T01:05:22.603412Z[Etc/UTC]","0.0","9.75"
-"Create user.","Try to create a user without data.","SUCCESS","2022-10-17T01:05:32.385238Z[Etc/UTC]","0.0","1.14"
-"Delete user.","Delete an user.","SUCCESS","2022-10-17T01:05:33.550105Z[Etc/UTC]","0.0","2.88"
-"Delete user.","Delete a user with an identification deleted previously.","SUCCESS","2022-10-17T01:05:38.42074Z[Etc/UTC]","0.0","2.9"
-"Search user.","Search an user by id.","SUCCESS","2022-10-17T01:05:42.402838Z[Etc/UTC]","0.0","2.52"

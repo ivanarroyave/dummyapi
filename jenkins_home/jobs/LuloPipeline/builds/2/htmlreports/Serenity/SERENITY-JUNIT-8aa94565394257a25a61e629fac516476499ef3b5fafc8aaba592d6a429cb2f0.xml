@@ -1,1 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Search user." skipped="0" tests="2" time="3.09" timestamp="2022-10-17 01:05:41"><testcase name="Search all users."/><testcase name="Search an user by id."/></testsuite>

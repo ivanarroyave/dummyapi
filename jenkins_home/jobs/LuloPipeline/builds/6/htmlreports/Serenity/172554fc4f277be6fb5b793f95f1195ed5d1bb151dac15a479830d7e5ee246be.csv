@@ -1,4 +1,0 @@
-"Story","Title","Result","Date","Stability","Duration (s)"
-"Delete user.","Delete an user.","SUCCESS","2022-10-17T02:47:48.982538Z[Etc/UTC]","0.0","1.86"
-"Delete user.","Delete an user - App-id missing in header configuration.","SUCCESS","2022-10-17T02:47:51.317476Z[Etc/UTC]","0.0","1.47"
-"Delete user.","Delete a user with an identification deleted previously.","SUCCESS","2022-10-17T02:47:53.43608Z[Etc/UTC]","0.0","1.52"
