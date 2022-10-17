@@ -1,92 +1,113 @@
-# dummyapi
+# Automatización de servicios - Dummy API
+
+_A continuación se explicara la composición y consideraciones necesarias para interactuar por medio de automatizaciones con Dimmy API._
+
+## Comenzando 🚀
+
+_En este proyecto se pondrá en práctica conocimientos para automatizaciones de pruebas aplicadas a servicios y además, la ejecución de las pruebas por medio de Jenkins, el cual estará en un contenedor de Docker._
+
+_Este proyecto ilustra cómo trabajar con el patrón de automatización Screenplay bajo el framework de automatización llamado Serenity BDD: https://serenity-bdd.info/._
 
 
 
-## Getting started
+### Pre-requisitos 📋
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+_Todo el proceso de ejecución de pruebas se hará localmente. Así que ten presente los siguientes pre-requisitos para tener una buena experiencia de replicación. Además, si no se indica una versión para alguna herramienta pues deberás asegurar la versión más reciente._
+```
+Java 8+
+InteliJ IDEA (plugins: Gherkin; Cucumber for Java; Substeps Intellij plugin, Maven)
+Maven 3.8.6
+Git
+Doker
+```
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+### Adecuación local del proyecto de automatización 🔧
 
-## Add your files
+_Antes que nada, debes clonar el repositorio en tu equipo. Y si, eso es todo ya que se supone que dispones de los pre-requisitos._
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
 
 ```
-cd existing_repo
-git remote add origin https://gitlab.com/ID2A/dummyapi.git
-git branch -M main
-git push -uf origin main
+git clone https://gitlab.com/ID2A/dummyapi.git
 ```
 
-## Integrate with your tools
 
-- [ ] [Set up project integrations](https://gitlab.com/ID2A/dummyapi/-/settings/integrations)
+_Una vez hecho, verás la carpeta "dummyapi" la cual se generó por la clonación del repositorio; a su vez contiene, el proyecto de automatización está dentro de otra carpeta también llamada "dummyapi"._
 
-## Collaborate with your team
+## Ejecutando las pruebas ⚙️
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+_Primero deberás abrir el proyecto de automatización:_
+* Haga clic en Archivo > Abrir.
+* Navegue hasta el archivo pom.xml del proyecto.
+* Haga clic en Aceptar.
 
-## Test and Deploy
+### Analice las pruebas 🔩
 
-Use the built-in continuous integration in GitLab.
+_Las pruebas en este proyecto se basan en las funcionaliadaes descritas en https://dummyapi.io/docs/user y https://dummyapi.io/docs/errors._
+_Se han automatizado un todal de 11 escenarios de pruebas entre rutas ideales y alternas. Las descripciones de los Features y sus respectivos Scenarios las puede encontrar en la ruta: "src/test/resources/features/user"._
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+_Por cada Feature existe una clase runner en la ruta "src/test/java/io/dummyapi/runners/"._
+```
+* CreateUserRunner.
+* DeleteUserRunner.
+* SearchUserRunner
+* UpdateUserRunner.
+```
 
-***
+_Existen dos runner adicionales que representan una Suite de runners. Uno con Cucumber con Serenity y otro con Junit._
+```
+* AnExampleOfGeneralExecutorOfTest. Forma de Suite con CucumberWithSerenity.
+* DeleteUserRunner. Forma de Suite con Junit.
+```
 
-# Editing this README
+### Ejecute localmente las pruebas y genere un reporte de pruebas ⌨️
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
+_Para ejecutar las pruebas deberá hacerlo desde una consola o terminal. Navegue hasta donde se encuentre el archivo pom.xml. Ahora, desde la consola:_
 
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+_Primero: limpie el proyecto de archivos temporales._
+```
+mvn clean
+```
 
-## Name
-Choose a self-explaining name for your project.
+_Segundo: ejecute una o varias pruebas. Para la ejecución de pruebas el comando es diverso. Veamos un ejemplo para ejecutar un runner específico; será el Suite con CucumberWithSerenity. La idea de este formato es ejecutar todos los escenarios deseados desde una Suite._
+```
+mvn test -Dtest=AnExampleOfGeneralExecutorOfTest
+```
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+_Si desea ejecutar TODAS las pruebas use el siguiente comando:_
+```
+mvn verify
+```
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+_Para generar el reporte de pruebas. El reporte se genera normalmente en la ruta "./dummyapi/target/site/serenity/index.html". Para verlo, debe abrir el archivo "index.html"._
+```
+mvn serenity:aggregate
+```
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+_Tambien se puede ejecutar todo desde una sola línea._
+```
+mvn clean test -Dtest=AnExampleOfGeneralExecutorOfTest serenity:aggregate
+```
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+### Ejecute localmente las pruebas y genere un reporte de pruebas desde un contenedor de Docker con una imagen de Jenkins⌨️
+_De antemano ten presente que nos va a interesar guardar las configuraciones de Jenkins en un volumen de Docker externo al contenedor. Una vez que se configure Jenkins no queremos repetir el proceso una y otras vez si por alguna razón perdemos el contenedor. Mejor tenerlo a la mando para reusar las configuraciones de Jenkins (plugins instalados, pipelines configurados, usuarios, etc.) en un nuevo contenedor._
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+#### Ejecución con Docker compose ☕
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+## Autores ✒️
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+* **Iván Darío Arroyave Arboleda** - *Ingeniero de sistemas de información - Especializado en el aseguramiento de la calidad del software* - [ID2A](https://gitlab.com/ID2A)
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+## Expresiones de Gratitud 🎁
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+* Comenta a otros sobre este proyecto 📢
+* Invita una cerveza 🍺 o un café ☕ a alguien del equipo. 
+* Da las gracias públicamente 🤓.
 
-## License
-For open source projects, say how it is licensed.
+* etc.
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+
+
+---
+⌨️ con ❤️ por [Iván Darío Arroyave Arboleda](https://gitlab.com/ID2A) 😊
