@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Create user." skipped="0" tests="2" time="10.89" timestamp="2022-10-17 01:05:22"><testcase name="Create a normal user."/><testcase name="Try to create a user without data."/></testsuite>

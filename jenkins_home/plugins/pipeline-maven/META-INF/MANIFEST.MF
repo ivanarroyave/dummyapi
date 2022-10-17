@@ -1,0 +1,37 @@
+Manifest-Version: 1.0
+Created-By: Maven Archiver 3.6.0
+Build-Jdk-Spec: 11
+Specification-Title: Pipeline Maven Integration Plugin
+Specification-Version: 0.0
+Implementation-Title: Pipeline Maven Integration Plugin
+Implementation-Version: 1205.vceea_7b_972817
+Group-Id: org.jenkins-ci.plugins
+Short-Name: pipeline-maven
+Long-Name: Pipeline Maven Integration Plugin
+Url: https://github.com/jenkinsci/pipeline-maven-plugin/pipeline-maven
+Plugin-Version: 1205.vceea_7b_972817
+Hudson-Version: 2.319.3
+Jenkins-Version: 2.319.3
+Plugin-Dependencies: h2-api:1.4.199,mysql-api:8.0.16;resolution:=optiona
+ l,postgresql-api:42.3.3;resolution:=optional,maven-plugin:3.16;resoluti
+ on:=optional,workflow-api:1153.vb_912c0e47fb_a_,workflow-step-api:639.v
+ 6eca_cd8c04a_a_,branch-api:2.1046.v0ca_37783ecc5,cloudbees-folder:6.722
+ .v8165b_a_cf25e9,config-file-provider:3.10.0,credentials-binding:523.vd
+ 859a_4b_122e6,credentials:1087.1089.v2f1b_9a_b_040e4,flaky-test-handler
+ :1.2.2;resolution:=optional,htmlpublisher:1.30;resolution:=optional,jac
+ oco:3.3.2;resolution:=optional,jgiven:0.15.1;resolution:=optional,junit
+ -attachments:95.v69691d523620;resolution:=optional,junit:1.54.3;resolut
+ ion:=optional,matrix-project:772.v494f19991984;resolution:=optional,mav
+ en-invoker-plugin:2.4;resolution:=optional,pipeline-build-step:2.18;res
+ olution:=optional,script-security:1138.v8e727069a_025,findbugs:5.0.0;re
+ solution:=optional,tasks:4.53;resolution:=optional
+Plugin-Developers: Cyrille Le Clerc:cleclerc:cleclerc@cloudbees.com,Alva
+ ro Lobato:alvarolobato:alobato@cloudbees.com,Arnaud Héritier:aheritier
+ :aheritier@apache.org,Benoit Guérin:bguerin:benoit.guerin1@free.fr
+Plugin-License-Name: The MIT license
+Plugin-License-Url: http://www.opensource.org/licenses/mit-license.php
+Plugin-ChangelogUrl: https://github.com/jenkinsci/pipeline-maven-plugin/
+ releases
+Plugin-ScmUrl: https://github.com/jenkinsci/pipeline-maven-plugin/pipeli
+ ne-maven
+

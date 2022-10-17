@@ -1,15 +1,15 @@
 version: "3"
 
 services:
-  jenkins:
+  jenkinsLulo:
     user: root
-    image: "jenkinsci/blueocean:1.23.1"
+    image: "jenkins/jenkins"
     ports:
       - "8080:8080"
     volumes:
       - ./jenkins_home:/var/jenkins_home
-      - /usr/local/bin/docker:/usr/bin/docker
-      - /var/run/docker.sock:/var/run/docker.sock
+      - //usr//local//bin//docker:/usr/bin/docker
+      - //var//run//docker.sock:/var/run/docker.sock
     networks:
       - mynet
     

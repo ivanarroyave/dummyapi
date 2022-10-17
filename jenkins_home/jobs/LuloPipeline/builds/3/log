@@ -1,0 +1,487 @@
+Started by user [8mha:////4MCltHh8qOFnLhIDbvxX2zrGvn6serndlFvaFOY9p18QAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyZEgZu/dLi1CL9xJTczDwArymMH8AAAAA=[0mIván Darío Arroyave Arboleda
+[8mha:////4GlPfBCp8Tfy5fHGOOEM8NzK1u4/EkuFfK1LWFestVq7AAAAoh+LCAAAAAAAAP9tjTEOwjAQBM8BClpKHuFItIiK1krDC0x8GCfWnbEdkooX8TX+gCESFVvtrLSa5wtWKcKBo5UdUu8otU4GP9jS5Mixv3geZcdn2TIl9igbHBs2eJyx4YwwR1SwULBGaj0nRzbDRnX6rmuvydanHMu2V1A5c4MHCFXMWcf8hSnC9jqYxPTz/BXAFEIGsfuclm8zQVqFvQAAAA==[0m[Pipeline] Start of Pipeline
+[8mha:////4GAFgv1SJfBDiMytRd8hBADykC6jKySzs5EhjWiAtRchAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycohUghExsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jduZBmjwAAAAA==[0m[Pipeline] node
+Running on [8mha:////4FrCTs/foPBC+q/lpsulabWselXBP+1q2nztY0Cs10XkAAAAqB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz2EgYZ/dzEvMT0VP3k/NyC0pLUIn2NpNLMnBLdzDxNfQB9z6/O0QAAAA==[0mJenkins in /var/jenkins_home/workspace/LuloPipeline
+[8mha:////4ClU2F8CzJi0I2FRzMOP6sz5NdXx1QAESee7NiaLP+YcAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gA0xsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jfoP95RwAAAAA==[0m[Pipeline] {
+[8mha:////4HWSKpjUxq0bGCz8d2/vdu5bTH1MbCsSvjNn6Ycf1MPjAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0gQkxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jc09154wAAAAA==[0m[Pipeline] stage
+[8mha:////4ACXJJbsv91p3jA1P8XgKgXl2YTNEQ0ypgGdUkYhjD/WAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+KOrAycoh0ggUxsUZZOEFIQkgb/d8mKe3EibgadyBQiQlLlmxL1nu+oE4RjhQdby12HpP2vA+jK4lPFLtroIm3dOGaMFGwXNpJkrGnpUrKFhaxClYC1hZ1oOTRZdiIVt1VExS65pxj2Q4CKm8GeAAThZxVzN8yR9jeRpMIf5y/AJj7DGxXvP/86jek7ggRwAAAAA==[0m[Pipeline] { (Prepare code)
+[8mha:////4HrCgQ9TTfnDeP1qtkiA7KPpOVavny3WxTOX1q/VupmdAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbaWGsbAmNJ0AWEZb8zwLrbuWJvJp3kLiJlZNMMm+a93rDOic4UbLcG+wdZu14DKOti0+U+lugiXu6ck2YKRguzSSpM+cFJRUDS1gDKwEbgzpQdmgLbIVXD9UGhba9lFS/o4DGdQM8gYlqLiqVL8wJdvexy4Q/z18BzLEA29ce4gfg7KmOvAAAAA==[0m[Pipeline] git
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/jenkins_home/workspace/LuloPipeline/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://gitlab.com/ID2A/dummyapi.git # timeout=10
+Fetching upstream changes from https://gitlab.com/ID2A/dummyapi.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.30.2'
+ > git fetch --tags --force --progress -- https://gitlab.com/ID2A/dummyapi.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision ed4f4833550e079909d2224273dbbbe1d75f1782 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f ed4f4833550e079909d2224273dbbbe1d75f1782 # timeout=10
+ > git branch -a -v --no-abbrev # timeout=10
+ > git branch -D main # timeout=10
+ > git checkout -b main ed4f4833550e079909d2224273dbbbe1d75f1782 # timeout=10
+Commit message: "Merge branch 'feature/searchUser' into 'main'"
+ > git rev-list --no-walk ed4f4833550e079909d2224273dbbbe1d75f1782 # timeout=10
+[8mha:////4GpvE6iMgTZzoNqtCratmePuzyQHvD6Ibme6qNgCEzsSAAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQTbGRNjZUtoPAGyiLDkfxZYdytP5NW8g8RNrJxkknnTvNcb1jnBiZLl3mDvMGvHYxhtXXyi1N8CTdzTlWvCTMFwaSZJnTkvKKkYWMIaWAnYGNSBskNbYCu8eqg2KLTtpaT6HQU0rhvgCUxUc1GpfGFOsLuPXSb8ef4KYI6xADvU7j9Dg2gqvAAAAA==[0m[Pipeline] }
+[8mha:////4EpypwgQ3AJcFCJe4p4bH5qWLr6B4yR0CW0T08wUU7K8AAAAoh+LCAAAAAAAAP9tjTEOAiEURD9rLGwtPQRbWRhjZUtoPAGyiLDkfxZYdytP5NW8g8RNrJxkknnTvNcb1jnBiZLl3mDvMGvHYxhtXXyi1N8CTdzTlWvCTMFwaSZJnTkvKKkYWMIaWAnYGNSBskNbYCu8eqg2KLTtpaT6HQU0rhvgCUxUc1GpfGFOsLuPXSb8ef4KYI6xADvU7j9J+wGOvAAAAA==[0m[Pipeline] // stage
+[8mha:////4FTiEULdphaN9GxDWhYdOJc888d0QALq7doXmeYafRe2AAAAph+LCAAAAAAAAP9tjTEOwjAQBM9BKWgpeYQDEh2iorXc8AITG+PEugv2haTiRXyNPxCIRMVWOyut5vmCMic4UPKycdgGzHWQXez91ORAqb1EGmRDZ1kTZopOajdosu44oyZ2MEcUsFCwdFhHygE9w0o15m6qaNBXJ07TtldQBHuDBwg1mdkk/sKYYH3tbSb8ef4KYOwYxI6h2G4+x/INtuQqUcEAAAA=[0m[Pipeline] stage
+[8mha:////4HghAwEPmPTOm5H2vwW1wl+7LLFvvXuy7MOgjaLPv1FxAAAApR+LCAAAAAAAAP9tjTEOwjAUQ3+DOrAycoiUzoiJNerCCUITQtLo/zZJSSdOxNW4Ay2VmPBg2Zas93pDGQOcKBjuNHYWY2t570czJ54pdDdPmTu68pYwkte80bkhpc9rbShpWFUw2AjYamw9RYsmwU44+ZCVl2iqSwrzdhTArBrgCYWYyUmG9C1TgP19VJHwx/kLgKlPwOrDYvXyLD8BobDcwgAAAA==[0m[Pipeline] { (Start Testing)
+[8mha:////4KJmde83GUyEf9Mhd4GwUmjiXRFFcla62TvZuw41RtVtAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUZUVMrFEWThCaEJJG/7dJSjpxIq7GHWipxIQHy7ZkvdcbqhjgRMEwp7GzGFvLej+aObFMobt5yszRlbWEkbxmQmdBSp/XKihpWFWUsOGw1dh6ihZNgh138iFrL9HUlxTm7cihtGqAJxR8JicZ0rdMAfb3UUXCH+cvAKY+Qdk0ix2WZ/UBbwyqm8IAAAA=[0m[Pipeline] withMaven
+[withMaven] Options: []
+[withMaven] Available options: 
+[withMaven] using JDK installation provided by the build agent
+[withMaven] using Maven installation 'Maven 3.8.6'
+[8mha:////4H7FaLStcXIVYC2K2Azcyc9CuNBGv85Z+bWFDXpEchDFAAAAph+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUwIiYukZZOEFoQkgb/V9+UtqJE3E17kBLJSY8WLYl673eUESGE7ETjcXWY6y96ELvpiQG4vYaaBANXURNGClYoeygyNhqqYqShUVZDisJa4t1oOjRJdjIRj90GTS68px42o4Scm/u8IRMTuSkOX3LyLC99SYS/jh/ATB2CfLdfrbD/Cw+y7kUycIAAAA=[0m[Pipeline] {
+[8mha:////4DXcTu6vC1cpRhFj3j4SCgEd7IBK2AICzI5YEAEo7faBAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUCDbE1DXKwglCE0La6P/yk9JOnIircQdaKjHhwbItWe/1hiIynIidaCy2HmPtRRd6NyUxELfXQINo6CJqwkjBCmUHRcZWS1WULCzKclhJWFusA0WPLsFGNvqhy6DRlefE03aUkHtzhydkciInzelbRobtrTeR8Mf5C4CxS5Dv9rMd5mfxAbNWnxXCAAAA[0m[Pipeline] dir
+Running in /var/jenkins_home/workspace/LuloPipeline/dummyapi
+[8mha:////4CxtFbwynT3+i9F+CDzknHY1kR9Wo+SbhUkRJfQVjqaQAAAApx+LCAAAAAAAAP9tjTEOwjAUQ3+LOrAycohUSDAhpq5RFk4QmhDSRv+Xn5R24kRcjTvQUokJD5ZtyXqvNxSR4UTsRGOx9RhrL7rQuymJgbi9BhpEQxdRE0YKVig7KDK2WqqiZGFRlsNKwtpiHSh6dAk2stEPXQaNrjwnnrajhNybOzwhkxM5aU7fMjJsb72JhD/OXwCMXYJ8t5/tMD+LD5WQ+PfCAAAA[0m[Pipeline] {
+[8mha:////4CvYgl8Bex8JNsUJDU+Hz2sqvFmLvy31wAkvCsg45e3AAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiCmgQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGPIUG53n9qHN7LjSKW+AAAA[0m[Pipeline] sh
++ mvn clean test -Dtest=AnExampleOfGeneralExecutorOfTest serenity:aggregate
+----- withMaven Wrapper script -----
+Picked up JAVA_TOOL_OPTIONS: -Dmaven.ext.class.path="/var/jenkins_home/workspace/LuloPipeline@tmp/withMaven74e2fb58/pipeline-maven-spy.jar" -Dorg.jenkinsci.plugins.pipeline.maven.reportsFolder="/var/jenkins_home/workspace/LuloPipeline@tmp/withMaven74e2fb58" 
+Apache Maven 3.8.6 (84538c9988a25aec085021c365c560670ad80f63)
+Maven home: /var/jenkins_home/tools/hudson.tasks.Maven_MavenInstallation/Maven_3.8.6
+Java version: 11.0.16.1, vendor: Eclipse Adoptium, runtime: /opt/java/openjdk
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "5.10.102.1-microsoft-standard-wsl2", arch: "amd64", family: "unix"
+[INFO] [jenkins-event-spy] Generate /var/jenkins_home/workspace/LuloPipeline@tmp/withMaven74e2fb58/maven-spy-20221017-011038-38910952682814675894424.log.tmp ...
+[INFO] Scanning for projects...
+[8mha:////4HFFqpjPslXop2GQbxt+Tp6GVSJecJRN0UEEm+4A0f9fAAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] 
+[8mha:////4HFFqpjPslXop2GQbxt+Tp6GVSJecJRN0UEEm+4A0f9fAAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] Some problems were encountered while building the effective model for io.dummyapi:dummyapi:jar:1.0-SNAPSHOT
+[8mha:////4HFFqpjPslXop2GQbxt+Tp6GVSJecJRN0UEEm+4A0f9fAAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] 'dependencies.dependency.version' for junit:junit:jar is either LATEST or RELEASE (both of them are being deprecated) @ line 93, column 22
+[8mha:////4HFFqpjPslXop2GQbxt+Tp6GVSJecJRN0UEEm+4A0f9fAAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] 
+[8mha:////4HFFqpjPslXop2GQbxt+Tp6GVSJecJRN0UEEm+4A0f9fAAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[8mha:////4HFFqpjPslXop2GQbxt+Tp6GVSJecJRN0UEEm+4A0f9fAAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] 
+[8mha:////4HFFqpjPslXop2GQbxt+Tp6GVSJecJRN0UEEm+4A0f9fAAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[8mha:////4HFFqpjPslXop2GQbxt+Tp6GVSJecJRN0UEEm+4A0f9fAAAAYh+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6SeOJwgmrt9CSsTA0NFEYMUVEtyfl5xfk6qnjOEBilkgABGkMICAEQzmI1iAAAA[0m[WARNING] 
+[INFO] 
+[INFO] ------------------------< io.dummyapi:dummyapi >------------------------
+[INFO] Building dummyapi 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[8mha:////4MD0H33tDW8x791Naaihi0iMpSjnM6JRV+thKsk1whVzAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ dummyapi ---
+[INFO] Deleting /var/jenkins_home/workspace/LuloPipeline/dummyapi/target
+[INFO] 
+[8mha:////4MD0H33tDW8x791Naaihi0iMpSjnM6JRV+thKsk1whVzAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ dummyapi ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[8mha:////4MD0H33tDW8x791Naaihi0iMpSjnM6JRV+thKsk1whVzAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.10.1:compile (default-compile) @ dummyapi ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 47 source files to /var/jenkins_home/workspace/LuloPipeline/dummyapi/target/classes
+[INFO] 
+[8mha:////4MD0H33tDW8x791Naaihi0iMpSjnM6JRV+thKsk1whVzAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ dummyapi ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 15 resources
+[INFO] 
+[8mha:////4MD0H33tDW8x791Naaihi0iMpSjnM6JRV+thKsk1whVzAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.10.1:testCompile (default-testCompile) @ dummyapi ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 11 source files to /var/jenkins_home/workspace/LuloPipeline/dummyapi/target/test-classes
+[INFO] 
+[8mha:////4MD0H33tDW8x791Naaihi0iMpSjnM6JRV+thKsk1whVzAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- maven-surefire-plugin:3.0.0-M5:test (default-test) @ dummyapi ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[8mha:////4FH0mKTJ6GculP69ypAjymMUsUYE3CmcLMBHT/vWWwIzAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] Picked up JAVA_TOOL_OPTIONS: -Dmaven.ext.class.path="/var/jenkins_home/workspace/LuloPipeline@tmp/withMaven74e2fb58/pipeline-maven-spy.jar" -Dorg.jenkinsci.plugins.pipeline.maven.reportsFolder="/var/jenkins_home/workspace/LuloPipeline@tmp/withMaven74e2fb58" 
+[INFO] Running io.dummyapi.runners.user.AnExampleOfGeneralExecutorOfTest
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+[8mha:////4FH0mKTJ6GculP69ypAjymMUsUYE3CmcLMBHT/vWWwIzAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] WARNING: An illegal reflective access operation has occurred
+[8mha:////4FH0mKTJ6GculP69ypAjymMUsUYE3CmcLMBHT/vWWwIzAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] WARNING: Illegal reflective access by net.thucydides.core.steps.StepInterceptor (file:/root/.m2/repository/net/serenity-bdd/serenity-core/3.3.4/serenity-core-3.3.4.jar) to field java.lang.reflect.Method.root
+[8mha:////4FH0mKTJ6GculP69ypAjymMUsUYE3CmcLMBHT/vWWwIzAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] WARNING: Please consider reporting this to the maintainers of net.thucydides.core.steps.StepInterceptor
+[8mha:////4FH0mKTJ6GculP69ypAjymMUsUYE3CmcLMBHT/vWWwIzAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+[8mha:////4FH0mKTJ6GculP69ypAjymMUsUYE3CmcLMBHT/vWWwIzAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55Zek1m9pfpLfVWLNxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAABqVhoSYAAAAA==[0m[ERROR] WARNING: All illegal access operations will be denied in a future release
+
+Scenario: Create a normal user.                                                # src/test/resources/features/user/create-user.feature:9
+  Given the admin user are in the creation user section                        # io.dummyapi.stepdefinitions.user.CreateUserStepDefinition.theAdminUserAreInTheCreationUserSection()
+{
+    "id": "634cabbdb523e5256e7510cb",
+    "title": "mr",
+    "firstName": "Lida",
+    "lastName": "Wilderman",
+    "gender": "male",
+    "email": "modesto.hermann@lulo.com",
+    "phone": "(505) 440-7125",
+    "registerDate": "2022-10-17T01:11:25.757Z",
+    "updatedDate": "2022-10-17T01:11:25.757Z"
+}
+  When he configure and init the user creation                                 # io.dummyapi.stepdefinitions.user.CreateUserStepDefinition.heConfigureAndInitTheUserCreation()
+  Then he should see in the system a user according to previous user creation. # io.dummyapi.stepdefinitions.user.CreateUserStepDefinition.heShouldSeeTinTheSystemAUserAccordingToPreviousUserCreation()
+
+Scenario: Try to create a user without data.                                                    # src/test/resources/features/user/create-user.feature:13
+  Given the admin user are in the creation user section                                         # io.dummyapi.stepdefinitions.user.CreateUserStepDefinition.theAdminUserAreInTheCreationUserSection()
+{
+    "error": "BODY_NOT_VALID",
+    "data": {
+        "email": "Path `email` is required.",
+        "firstName": "Path `firstName` is required.",
+        "gender": "`` is not a valid enum value for path `gender`.",
+        "lastName": "Path `lastName` is required.",
+        "phone": "Path `phone` (``) is shorter than the minimum allowed length (5).",
+        "title": "`` is not a valid enum value for path `title`."
+    }
+}
+  When he configure and init the user creation without data                                     # io.dummyapi.stepdefinitions.user.CreateUserStepDefinition.heConfigureAndInitTheUserCreationWithoutData()
+  Then he should see a system error message that describe a body no valid format for all fields # io.dummyapi.stepdefinitions.user.CreateUserStepDefinition.heShouldSeeASystemErrorMessageThatDescribeABodyNoValidFormatForAllFields()
+
+Scenario: Delete an user.                                                      # src/test/resources/features/user/delete-user.feature:9
+  Given the admin user are in the remove users section                         # io.dummyapi.stepdefinitions.user.DeleteUserStepDefinition.theAdminUserAreInTheRemoveUsersSection()
+{
+    "id": "634cabc1b523e5863b7510d0",
+    "title": "mr",
+    "firstName": "Kelley",
+    "lastName": "O'Connell",
+    "gender": "male",
+    "email": "lashandra.spencer@lulo.com",
+    "phone": "754.818.7255",
+    "registerDate": "2022-10-17T01:11:29.531Z",
+    "updatedDate": "2022-10-17T01:11:29.531Z"
+}
+{
+    "id": "634cabc1b523e5863b7510d0"
+}
+  When he select an user to delete                                             # io.dummyapi.stepdefinitions.user.DeleteUserStepDefinition.heSelectAnUserToDelete()
+  Then he should see that the selected user is really removed from the system. # io.dummyapi.stepdefinitions.user.DeleteUserStepDefinition.heShouldSeeThatTheSelectedUserIsReallyRemovedFromTheSystem()
+
+Scenario: Delete an user - App-id not exists in header configuration. # src/test/resources/features/user/delete-user.feature:13
+  Given the admin user are in the remove users section                # io.dummyapi.stepdefinitions.user.DeleteUserStepDefinition.theAdminUserAreInTheRemoveUsersSection()
+{
+    "error": "APP_ID_NOT_EXIST"
+}
+  When the manager user proceed to delete the user                    # io.dummyapi.stepdefinitions.user.DeleteUserStepDefinition.theManagerUserProceedToDeleteTheUser()
+  Then he should see an error type named "APP_ID_NOT_EXIST"           # io.dummyapi.stepdefinitions.user.DeleteUserStepDefinition.heShouldSeeAnErrorTypeNamed(java.lang.String)
+
+Scenario: Delete an user - App-id missing in header configuration. # src/test/resources/features/user/delete-user.feature:17
+  Given the admin user are in the remove users section             # io.dummyapi.stepdefinitions.user.DeleteUserStepDefinition.theAdminUserAreInTheRemoveUsersSection()
+{
+    "error": "APP_ID_MISSING"
+}
+  When the manager user proceed to delete an user                  # io.dummyapi.stepdefinitions.user.DeleteUserStepDefinition.theManagerUserProceedToDeleteAnUser()
+  Then he should see an error type named like "APP_ID_MISSING"     # io.dummyapi.stepdefinitions.user.DeleteUserStepDefinition.heShouldSeeAnErrorTypeNamedLike(java.lang.String)
+
+Scenario: Delete a user with an invalid identification.                           # src/test/resources/features/user/delete-user.feature:21
+  Given the admin user are in the remove users section                            # io.dummyapi.stepdefinitions.user.DeleteUserStepDefinition.theAdminUserAreInTheRemoveUsersSection()
+{
+    "error": "PARAMS_NOT_VALID"
+}
+  When the manager user proceed to delete an user using an invalid identification # io.dummyapi.stepdefinitions.user.DeleteUserStepDefinition.theManagerUserProceedToDeleteAnUserUsingAnInvalidIdentification()
+  Then he should see an error reference to "PARAMS_NOT_VALID"                     # io.dummyapi.stepdefinitions.user.DeleteUserStepDefinition.heShouldSeeAnErrorReferenceTo(java.lang.String)
+
+Scenario: Delete a user with an identification deleted previously.            # src/test/resources/features/user/delete-user.feature:25
+  Given the admin user are in the remove users section                        # io.dummyapi.stepdefinitions.user.DeleteUserStepDefinition.theAdminUserAreInTheRemoveUsersSection()
+{
+    "id": "634cabc5b523e584b37510d8",
+    "title": "mr",
+    "firstName": "Elvin",
+    "lastName": "Kuhic",
+    "gender": "male",
+    "email": "ivette.bernier@lulo.com",
+    "phone": "(856) 510-5482",
+    "registerDate": "2022-10-17T01:11:33.204Z",
+    "updatedDate": "2022-10-17T01:11:33.204Z"
+}
+{
+    "id": "634cabc5b523e584b37510d8"
+}
+{
+    "error": "RESOURCE_NOT_FOUND"
+}
+  When the manager user proceed to delete an user that previously was deleted # io.dummyapi.stepdefinitions.user.DeleteUserStepDefinition.theManagerUserProceedToDeleteAnUserThatPreviouslyWasDeleted()
+  Then he should see an error type reference to "RESOURCE_NOT_FOUND"          # io.dummyapi.stepdefinitions.user.DeleteUserStepDefinition.heShouldSeeAnErrorTypeReferenceTo(java.lang.String)
+
+Scenario: Try to delete some user without user identification.                   # src/test/resources/features/user/delete-user.feature:29
+  Given the admin user are in the remove users section                           # io.dummyapi.stepdefinitions.user.DeleteUserStepDefinition.theAdminUserAreInTheRemoveUsersSection()
+{
+    "error": "PATH_NOT_FOUND"
+}
+  When the manager user proceed to delete a user but without user identification # io.dummyapi.stepdefinitions.user.DeleteUserStepDefinition.theManagerUserProceedToDeleteAUserButWithoutUserIdentification()
+  Then he should see a message related to error type "PATH_NOT_FOUND"            # io.dummyapi.stepdefinitions.user.DeleteUserStepDefinition.heShouldSeeAMessageRelatedToErrorType(java.lang.String)
+
+Scenario: Search all users.                            # src/test/resources/features/user/search-user.feature:6
+  Given the admin user are in the searching section    # io.dummyapi.stepdefinitions.user.SearchUserStepDefinition.theAdminUserAreInTheRightForm()
+{
+    "data": [
+        {
+            "id": "60d0fe4f5311236168a109ca",
+            "title": "ms",
+            "firstName": "Sara",
+            "lastName": "Andersen",
+            "picture": "https://randomuser.me/api/portraits/women/58.jpg"
+        },
+        {
+            "id": "60d0fe4f5311236168a109cb",
+            "title": "miss",
+            "firstName": "Edita",
+            "lastName": "Vestering",
+            "picture": "https://randomuser.me/api/portraits/med/women/89.jpg"
+        },
+        {
+            "id": "60d0fe4f5311236168a109cc",
+            "title": "ms",
+            "firstName": "Adina",
+            "lastName": "Barbosa",
+            "picture": "https://randomuser.me/api/portraits/med/women/28.jpg"
+        },
+        {
+            "id": "60d0fe4f5311236168a109cd",
+            "title": "mr",
+            "firstName": "Roberto",
+            "lastName": "Vega",
+            "picture": "https://randomuser.me/api/portraits/med/men/25.jpg"
+        },
+        {
+            "id": "60d0fe4f5311236168a109ce",
+            "title": "mr",
+            "firstName": "Rudi",
+            "lastName": "Droste",
+            "picture": "https://randomuser.me/api/portraits/med/men/83.jpg"
+        },
+        {
+            "id": "60d0fe4f5311236168a109cf",
+            "title": "mrs",
+            "firstName": "Carolina",
+            "lastName": "Lima",
+            "picture": "https://randomuser.me/api/portraits/med/women/5.jpg"
+        },
+        {
+            "id": "60d0fe4f5311236168a109d0",
+            "title": "mr",
+            "firstName": "Emre",
+            "lastName": "Asikoglu",
+            "picture": "https://randomuser.me/api/portraits/med/men/23.jpg"
+        },
+        {
+            "id": "60d0fe4f5311236168a109d1",
+            "title": "mr",
+            "firstName": "Kent",
+            "lastName": "Brewer",
+            "picture": "https://randomuser.me/api/portraits/med/men/52.jpg"
+        },
+        {
+            "id": "60d0fe4f5311236168a109d2",
+            "title": "mr",
+            "firstName": "Evan",
+            "lastName": "Carlson",
+            "picture": "https://randomuser.me/api/portraits/med/men/80.jpg"
+        },
+        {
+            "id": "60d0fe4f5311236168a109d3",
+            "title": "mr",
+            "firstName": "Friedrich-Karl",
+            "lastName": "Brand",
+            "picture": "https://randomuser.me/api/portraits/med/men/7.jpg"
+        },
+        {
+            "id": "60d0fe4f5311236168a109d4",
+            "title": "mr",
+            "firstName": "Valentin",
+            "lastName": "Ortega",
+            "picture": "https://randomuser.me/api/portraits/med/men/3.jpg"
+        },
+        {
+            "id": "60d0fe4f5311236168a109d5",
+            "title": "mrs",
+            "firstName": "Sibylle",
+            "lastName": "Leibold",
+            "picture": "https://randomuser.me/api/portraits/med/women/89.jpg"
+        },
+        {
+            "id": "60d0fe4f5311236168a109d6",
+            "title": "mrs",
+            "firstName": "Elisa",
+            "lastName": "Lorenzo",
+            "picture": "https://randomuser.me/api/portraits/med/women/89.jpg"
+        },
+        {
+            "id": "60d0fe4f5311236168a109d7",
+            "title": "mr",
+            "firstName": "Leevi",
+            "lastName": "Savela",
+            "picture": "https://randomuser.me/api/portraits/med/men/67.jpg"
+        },
+        {
+            "id": "60d0fe4f5311236168a109d8",
+            "title": "mrs",
+            "firstName": "Karoline",
+            "lastName": "Sviggum",
+            "picture": "https://randomuser.me/api/portraits/med/women/61.jpg"
+        },
+        {
+            "id": "60d0fe4f5311236168a109d9",
+            "title": "ms",
+            "firstName": "Nuria",
+            "lastName": "Leon",
+            "picture": "https://randomuser.me/api/portraits/med/women/93.jpg"
+        },
+        {
+            "id": "60d0fe4f5311236168a109da",
+            "title": "mr",
+            "firstName": "Lance",
+            "lastName": "Foster",
+            "picture": "https://randomuser.me/api/portraits/med/men/13.jpg"
+        },
+        {
+            "id": "60d0fe4f5311236168a109db",
+            "title": "miss",
+            "firstName": "Naomi",
+            "lastName": "Rodrigues",
+            "picture": "https://randomuser.me/api/portraits/med/women/39.jpg"
+        },
+        {
+            "id": "60d0fe4f5311236168a109dc",
+            "title": "mr",
+            "firstName": "Evan",
+            "lastName": "Roux",
+            "picture": "https://randomuser.me/api/portraits/med/men/59.jpg"
+        },
+        {
+            "id": "60d0fe4f5311236168a109dd",
+            "title": "mr",
+            "firstName": "Miguel",
+            "lastName": "Lima",
+            "picture": "https://randomuser.me/api/portraits/med/men/31.jpg"
+        }
+    ],
+    "total": 288,
+    "page": 0,
+    "limit": 20
+}
+  When he search for all users in general              # io.dummyapi.stepdefinitions.user.SearchUserStepDefinition.heSearchForAllUsersInGeneral()
+  Then he should see the list of all users in general. # io.dummyapi.stepdefinitions.user.SearchUserStepDefinition.heShouldSeeTheListOfAllUsersInGeneral()
+
+Scenario: Search an user by id.                                          # src/test/resources/features/user/search-user.feature:11
+{
+    "id": "634cabc9b523e5fcf57510e8",
+    "title": "mr",
+    "firstName": "Micah",
+    "lastName": "Carroll",
+    "gender": "male",
+    "email": "deja.weimann@lulo.com",
+    "phone": "(913) 810-8525",
+    "registerDate": "2022-10-17T01:11:37.888Z",
+    "updatedDate": "2022-10-17T01:11:37.888Z"
+}
+  Given the admin user are in the searching section with an user in mind # io.dummyapi.stepdefinitions.user.SearchUserStepDefinition.theAdminUserAreInTheSearchingSectionWithAnUserInMind()
+{
+    "id": "634cabc9b523e5fcf57510e8",
+    "title": "mr",
+    "firstName": "Micah",
+    "lastName": "Carroll",
+    "gender": "male",
+    "email": "deja.weimann@lulo.com",
+    "phone": "(913) 810-8525",
+    "registerDate": "2022-10-17T01:11:37.888Z",
+    "updatedDate": "2022-10-17T01:11:37.888Z"
+}
+  When he search the specific user by the identification code            # io.dummyapi.stepdefinitions.user.SearchUserStepDefinition.heSearchTheSpecificUserByTheIdentificationCode()
+  Then he should see the specific user information.                      # io.dummyapi.stepdefinitions.user.SearchUserStepDefinition.heShouldSeeTheSpecificUserInformation()
+
+Scenario: Update a normal user using all fields.                                   # src/test/resources/features/user/update-user.feature:6
+{
+    "id": "634cabcbb523e5a6a07510ef",
+    "title": "mr",
+    "firstName": "Marco",
+    "lastName": "Schowalter",
+    "gender": "male",
+    "email": "fred.sawayn@lulo.com",
+    "phone": "(931) 360-7641",
+    "registerDate": "2022-10-17T01:11:39.873Z",
+    "updatedDate": "2022-10-17T01:11:39.873Z"
+}
+  Given the admin user are in the update user information section                  # io.dummyapi.stepdefinitions.user.UpdateUserStepDefinition.theAdminUserAreInTheUpdateUserInformationSection()
+{
+    "id": "634cabcbb523e5a6a07510ef",
+    "title": "mr",
+    "firstName": "Sharron",
+    "lastName": "Beatty",
+    "gender": "male",
+    "email": "fred.sawayn@lulo.com",
+    "phone": "810-209-9575",
+    "registerDate": "2022-10-17T01:11:39.873Z",
+    "updatedDate": "2022-10-17T01:11:40.808Z"
+}
+  When he configure the new information and init the user updating                 # io.dummyapi.stepdefinitions.user.UpdateUserStepDefinition.heConfigureTheNewInformationAndInitTheUserUpdating()
+  Then he should see the user information according to previous user modification. # io.dummyapi.stepdefinitions.user.UpdateUserStepDefinition.heShouldSeeTheUserInformationAccordingToPreviousUserModification()
+┌───────────────────────────────────────────────────────────────────────────────────┐
+│ Share your Cucumber Report with your team at https://reports.cucumber.io          │
+│ Activate publishing with one of the following:                                    │
+│                                                                                   │
+│ src/test/resources/cucumber.properties:          cucumber.publish.enabled=true    │
+│ src/test/resources/junit-platform.properties:    cucumber.publish.enabled=true    │
+│ Environment variable:                            CUCUMBER_PUBLISH_ENABLED=true    │
+│ JUnit:                                           @CucumberOptions(publish = true) │
+│                                                                                   │
+│ More information at https://cucumber.io/docs/cucumber/environment-variables/      │
+│                                                                                   │
+│ Disable this message with one of the following:                                   │
+│                                                                                   │
+│ src/test/resources/cucumber.properties:          cucumber.publish.quiet=true      │
+│ src/test/resources/junit-platform.properties:    cucumber.publish.quiet=true      │
+└───────────────────────────────────────────────────────────────────────────────────┘
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 47.015 s - in io.dummyapi.runners.user.AnExampleOfGeneralExecutorOfTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] ------------------------< io.dummyapi:dummyapi >------------------------
+[INFO] Building dummyapi 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[8mha:////4MD0H33tDW8x791Naaihi0iMpSjnM6JRV+thKsk1whVzAAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75Zek2mxOX+vh68DGxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAAAn9LoiYAAAAA==[0m[INFO] --- serenity-maven-plugin:3.3.2:aggregate (default-cli) @ dummyapi ---
+[INFO] Test results for 11 tests generated in 2.5 secs in directory: file:/var/jenkins_home/workspace/LuloPipeline/dummyapi/target/site/serenity/
+[INFO] -----------------------------------------
+[INFO]  SERENITY TESTS: SUCCESS
+[INFO] -----------------------------------------
+[INFO] | Test cases executed    | 11
+[INFO] | Tests executed         | 11
+[INFO] | Tests passed           | 11
+[INFO] | Tests failed           | 0
+[INFO] | Tests with errors      | 0
+[INFO] | Tests compromised      | 0
+[INFO] | Tests aborted          | 0
+[INFO] | Tests pending          | 0
+[INFO] | Tests ignored/skipped  | 0
+[INFO] ------------------------ | --------------
+[INFO] | Total Duration         | 23s 230ms
+[INFO] | Fastest test took      | 519ms
+[INFO] | Slowest test took      | 9s 957ms
+[INFO] -----------------------------------------
+[INFO] 
+[INFO] SERENITY REPORTS
+[INFO]   - Full Report: file:///var/jenkins_home/workspace/LuloPipeline/dummyapi/target/site/serenity/index.html
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:26 min
+[INFO] Finished at: 2022-10-17T01:12:04Z
+[INFO] ------------------------------------------------------------------------
+[INFO] [jenkins-event-spy] Generated /var/jenkins_home/workspace/LuloPipeline@tmp/withMaven74e2fb58/maven-spy-20221017-011038-38910952682814675894424.log
+[8mha:////4B/iIlSGbSsEgMu9kVVraUu3Xf78GiKHzVc4uv8y6tT+AAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiCkSBqNJabniBiY1xYt0Z2yGpeBFf4w8EIlGxxWpnm3m+YJkiHDlabA11jlLjMPjeTgsHjt3F84Atn7FhSuwNSjNI1qaeUXI2MKcoYSFgZajxnBzZDGvRqruqvCJbnXKcvoOA0ukbPKAQkzmrmL8wRthce52Yfp6/AhhDyFBu95/avQGOY4V7vgAAAA==[0m[Pipeline] }
+[8mha:////4KtuNP9Kuh/5s++S9WwjNgTMi05qz0psAgrYaZ+7UFNQAAAApR+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiJAokRJXWcsMLTGyME+vO2A5JxYv4Gn8gEImKLVY728zzBcsU4cjRYmuoc5Qah8H3dlo4cOwungds+YwNU2JvUJpBsjb1jJKzgTlFCQsBK0ON5+TIZliLVt1V5RXZ6pTj9B0ElE7f4AGFmMxZxfyFMcLm2uvE9PP8FcAYQoZyu//U7g3N4dT9vgAAAA==[0m[Pipeline] // dir
+[8mha:////4BGBR+EOOKE6V0UPMg1+UBARSQn+cVjUIrn0OHBuFSCDAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOIiRIUQVVrLDS8wsTFOrDtjOyQVL+Jr/IFAJCq2WO1sM88XLFOEI0eLraHOUWocBt/baeHAsbt4HrDlMzZMib1BaQbJ2tQzSs4G5hQlLASsDDWekyObYS1adVeVV2SrU47TdxBQOn2DBxRiMmcV8xfGCJtrrxPTz/NXAGMIGcrt/lO7N8un7Ki+AAAA[0m[Pipeline] }
+[withMaven] artifactsPublisher - Archive artifact dummyapi/pom.xml under io/dummyapi/dummyapi/1.0-SNAPSHOT/dummyapi-1.0-SNAPSHOT.pom
+[withMaven] artifactsPublisher - Archive artifact dummyapi/pom.xml under io/dummyapi/dummyapi/1.0-SNAPSHOT/dummyapi-1.0-SNAPSHOT.pom
+[withMaven] junitPublisher - Archive test results for Maven artifact io.dummyapi:dummyapi:jar:1.0-SNAPSHOT generated by maven-surefire-plugin:test (default-test): dummyapi/target/surefire-reports/*.xml
+[withMaven] junitPublisher - Jenkins [8mha:////4NbOfOE0mDAmDSqPmYdg81jyAI5V7CPsxBXinboLG5/7AAAAqR+LCAAAAAAAAP9djLsNwjAUAB9BMAAVQowAdkcRlIoGpIiGCaxg+RPzbNnPKKzBGtAwBOOwA0TpuOauuucHJinCUudz8sgaj8k7yfa3IKMz2B49yU31eFX38C6gOMDUSVSkaxjn6AhmtRVXwZ1AxU8UDaptF2Hxt9sN7mcwMCoAuvCLOcFKE4VUch5cVgYTsxLb3sZzm9HQWhCJRl8kUvoC5Q3UlLEAAAA=[0mJUnit Attachments Plugin not found, can't publish test attachments.
+[withMaven] junitPublisher - Jenkins [8mha:////4FURNBaXuHTrqpRXDyYUhHWUZg5ZEMCw0w8PsqU7z9gtAAAAqh+LCAAAAAAAAP9djLENwjAQAJ8gGIASITGB444ClIoGpIiGCSxibCevt2V/ULIGa0DDEIzDDhCl45q76p4fmKUIK9tWyVN+8ZQ86vzQBx3RUXPyrDfF41XcwzuD7Ahz1GTYljBtIzIsylrdlERFRp45OjK7LsLyb7cfPcxgZJIBdOEXawZhmUPaShmwNY5SXmtqBjsvr6iaXrBOLKyiCnX8Aju+i4CyAAAA[0mJUnit Flaky Test Handler Plugin not found, can't publish JUnit flaky tests reports.
+Recording test results
+[withMaven] Jenkins [8mha:////4MyX7+y2IVU49dnSA0rE4hbm+tCz+sz0+csNfxIg0fGIAAAAuR+LCAAAAAAAAP9djDEOgjAUQL8YXU0cjTcw0s1BwqLRiBJiwgkINOVD89u0ReEaXkMXD+FxvIMaNt/y3vQebxhZA/OyKawiP1dkleT+odPcSKQ6UY6vwvszvOmXB14EY8lJuDKGYWOkg2lcZZeMyYwES51BEkFrYPa32/b+zaBn4AG0+hsTB0HpnLZrxq5Yo19xqpHsMkdfGcEKtFpmHTvuklOUpGyPVGwaYRdn2QikDyzr+9fAAAAA[0mFindBugs Plugin not found, don't display org.codehaus.mojo:findbugs-maven-plugin:findbugs results in pipeline screen.
+[withMaven] jgivenPublisher - Jenkins [8mha:////4EIYgJmJWe/idC/MhvY1a0/94/910ciBZMOMcAfoYqdqAAAAtR+LCAAAAAAAAP9djDEKwjAUQL8V3VwcxRsIyaSD0klEW0sReoJiQ/rb8BOStLbX8Bq6eAiP4x1U3HzLe9O7v2DkLMzLpnCa2FmT00qwQ2+EVUh1qr1YhbdHeDXPAIIIxkqQ9GUCw8YqD9Okytucq5wkz7xFkpvOwuxvt/35O4MfgwCgM5+YeFiW3hu35vyCNbJKUI3kGGpeoDMq73m8S49RmvF4j62gxUk1EukN/YxMoroAAAA=[0mJGiven Plugin not found, do not archive jgiven reports.
+[withMaven] Jenkins [8mha:////4P6X1ThH+nuT+vFLCcnA1d3LHiYoTreCwQgke+QV9T3uAAAAvB+LCAAAAAAAAP9djMEJwjAUQL8VHUBv4gbF5uZBKR5EsFqKUBcIbUjThJ+QpNqu4Rp6cQjHcQeV3nyX907v8YaRszCvmtJpjAqNTisW7TvDrBIoM+3ZMr4/45t5BRAkMFYMua9SGDZWeZikNb1QoihyknsrkK9bC7O/3bb3bwY9gwCgNd+YethU3hu3IuQqpIhqhlKgWxQi0paTUjijaEcOu+yYZDk5UyfDvKCIzIYn1XCBHwby8vjEAAAA[0mTask Scanner Plugin not found, don't display results of source code scanning for 'TODO' and 'FIXME' in pipeline screen.
+[withMaven] Publishers: Pipeline Graph Publisher: 12 ms, Generated Artifacts Publisher: 57 ms, Junit Publisher: 69 ms, Dependencies Fingerprint Publisher: 1 ms, Findbugs Publisher: 1 ms, JGiven Publisher: 1 ms, Open Task Scanner Publisher: 1 ms
+[8mha:////4HL4gkCgp2BeXUoFE9iVykzTp5tGdbfEj6uI1sXxdo5sAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICaRFVWisNLzCxMU6sO2M7JBUv4mv8AYtIVGyx2tlmXm9YxwAnDgZ7TYOl2Fn0bjR54cRhuDqesOcLdkyRncZWTy0r3SzYctKwpChhJWCjqXMcLZkEW9HLh6ycJFOdU8jfUUBp1R2eUIhsTjKkL8wBdrdRRaaf568AZu8TlPU+16H+AAjcDMm+AAAA[0m[Pipeline] // withMaven
+[8mha:////4F8PAj6+SOCYfm/Bf3AhWZ+1MnHodxIff16g/KtNkoCzAAAAox+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPMJRaBEVreWGF5jEGDvWnbEvJBUv4mv8AYtIVGyx2tlmXm9Y5wRHSlZ4g4PD3DkRw2jLEhOl4RpoEp4uoiPMFIxQZlLUm9OCitjAkqqGlYSNwS5QdmgZttLrh26CRtucOZXvIKF2/R2eUMliZp34C3OC3W3sM+HP81cAc4wM9b4t1bYfF15Zm74AAAA=[0m[Pipeline] }
+[8mha:////4DaBfIxDCPMWd+g0E7Li1QLnVosBTvYHg7DhqhUoHBRIAAAApB+LCAAAAAAAAP9tjTEOwjAQBC9BFLSUPOICaRFVWisNLzCxMU6sO2M7JBUv4mv8AYtIVGyx2tlmXm9YxwAnDgZ7TYOl2Fn0bjR54cRhuDqesOcLdkyRncZWTy0r3SzYctKwpChhJWCjqXMcLZkEW9HLh6ycJFOdU8jfUUBp1R2eUIhsTjKkL8wBdrdRRaaf568AZu8TlHWd67D/AC8cymq+AAAA[0m[Pipeline] // stage
+[8mha:////4Iho/CCXiLpHVbvC0qZvNdaNk/DtrYHOC0mQSStaTvKaAAAAox+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMKRgA5R0VppeIFJjHFi3QX7QlLxIr7GH4iIRMVWO9PM641lijhydKqx1HpKlVdd6N301MCxvQYeVMMXVTElDlaVdii5tqcZSxaLeVmOhcbKUhU4eXKCtW7MwxTBkCvOEid30Mh9fccTmZ7KYqJ8YYzY3Po6Mf06fwMYO0G2F+TbXfcBz7U2er0AAAA=[0m[Pipeline] publishHTML
+[htmlpublisher] Archiving HTML reports...
+[htmlpublisher] Archiving at BUILD level /var/jenkins_home/workspace/LuloPipeline/dummyapi/target/site/serenity to /var/jenkins_home/jobs/LuloPipeline/builds/3/htmlreports/Serenity
+[8mha:////4OEFjqUGumskjV3Q8MXkPG4eZPFZkFUZznYIoQxcb0MhAAAAox+LCAAAAAAAAP9tjbEOgjAURS8YB1dHP6Ikhs04uTYsfkGFWgvNe9g+hMkv8tf8B4kkTt7pnrOc1xvrFHHk6FRrqfOUaq/6MLj5qZFjdw08qpYvqmZKHKyq7FhxY08LViwWy7IcK42NpTpw8uQEW92ahymCIVecJc7uoJH75o4nMj2XxUT5whSxuw1NYvp1/gYw9b0g35eCrPwA6/9Rob0AAAA=[0m[Pipeline] }
+[8mha:////4McDxm5RvlG/Q/yFH/GDCx7YhiNzkggdmwHkY6ZMHJucAAAAox+LCAAAAAAAAP9tjTEOwjAQBDdBFLSUPMKRQFSIitZKwwtMYowT6y7YF5KKF/E1/kBEJCq22plmXm8sU8SRo1ONpdZTqrzqQu+mpwaO7TXwoBq+qIopcbCqtEPJtT3NWLJYzMtyLDRWlqrAyZMTrHVjHqYIhlxxlji5g0bu6zueyPRUFhPlC2PE5tbXienX+RvA2HWCfLsXZLsP+ENVAr0AAAA=[0m[Pipeline] // node
+[8mha:////4GVY6V3KzvE5qyapRft9Lnd2SxgmI7ZuaCgnAONDhJ/nAAAAox+LCAAAAAAAAP9tjbEOgjAURS8YB1dHP6IkDC7GybVh8Qsq1Fpo3sP2IUx+kb/mP0gkcfJO95zlvN5Yp4gjR6daS52nVHvVh8HNT40cu2vgUbV8UTVT4mBVZceKG3tasGKxWJblWGlsLNWBkycn2OrWPEwRDLniLHF2B43cN3c8kem5LCbKF6aI3W1oEtOv8zeAqe8FebkXZOUHvgnyMr0AAAA=[0m[Pipeline] End of Pipeline
+Finished: SUCCESS
