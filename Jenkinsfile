@@ -1,10 +1,6 @@
 pipeline {
     agent any
 	
-	environment {
-		NOMBRE_PROYECTO = "dummyapi";
-    }
-	
 	options {
 		// Keep the 10 most recent builds
 		buildDiscarder(logRotator(numToKeepStr:'5'))
