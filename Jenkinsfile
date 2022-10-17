@@ -1,6 +1,10 @@
 pipeline {
     agent any
 	
+	tools { 
+        maven 'Maven 3.8.6' 
+    }
+	
 	options {
 		// Keep the 10 most recent builds
 		buildDiscarder(logRotator(numToKeepStr:'5'))
@@ -9,22 +13,14 @@ pipeline {
 	
     stages {
 		stage("build") {
-		    withMaven(maven: 'Maven 3.8.6') {
-        	    dir("${env.WORKSPACE}/dummyapi"){
-                    steps {		
-						sh "mvn clean compile"
-					}
-                }
-            }
+			steps {	
+				sh "mvn clean compile"
+			}
         }
         stage("test") {
-            withMaven(maven: 'Maven 3.8.6') {
-        	    dir("${env.WORKSPACE}/dummyapi"){
-                    steps {		
-						sh "mvn clean test -Dtest=AnExampleOfGeneralExecutorOfTest serenity:aggregate"
-					}
-                }
-            }
+            steps {		
+				sh "mvn clean test -Dtest=AnExampleOfGeneralExecutorOfTest serenity:aggregate"
+			}
         }
     }
 }
