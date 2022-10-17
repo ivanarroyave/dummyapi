@@ -19,7 +19,7 @@ pipeline {
 					
 					 publishHTML(target: [
 						reportName : 'Serenity bdd report',
-						reportDir:   'dummyapi/target/site/serenity',
+						reportDir:   '/target/site/serenity',
 						reportFiles: 'index.html',
 						keepAll:     true,
 						alwaysLinkToLastBuild: true,
@@ -27,11 +27,6 @@ pipeline {
 					])
 				}
 			}
-			post {
-                always {
-					emailext attachLog: true, body: 'The build of ${currentBuild.fullDisplayName} has result ${currentBuild.result}', subject: 'ENTREGA - EJECUCIÓN BUILD - ${NOMBRE_PROYECTO}', to: 'ddario696@gmail.com'
-                }
-            }
         }
     }
 	
