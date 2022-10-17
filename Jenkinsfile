@@ -9,13 +9,21 @@ pipeline {
 	
     stages {
 		stage("build") {
-            steps {		
-				sh "mvn clean compile"
+		    withMaven(maven: 'Maven 3.8.6') {
+        	    dir("${env.WORKSPACE}/dummyapi"){
+                    steps {		
+						sh "mvn clean compile"
+					}
+                }
             }
         }
         stage("test") {
-            steps {
-				sh "mvn clean test -Dtest=AnExampleOfGeneralExecutorOfTest serenity:aggregate"
+            withMaven(maven: 'Maven 3.8.6') {
+        	    dir("${env.WORKSPACE}/dummyapi"){
+                    steps {		
+						sh "mvn clean test -Dtest=AnExampleOfGeneralExecutorOfTest serenity:aggregate"
+					}
+                }
             }
         }
     }
