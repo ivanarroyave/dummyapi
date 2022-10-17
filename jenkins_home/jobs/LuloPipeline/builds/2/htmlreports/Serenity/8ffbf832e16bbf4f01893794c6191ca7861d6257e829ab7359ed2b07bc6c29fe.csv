@@ -1,3 +1,0 @@
-"Story","Title","Result","Date","Stability","Duration (s)"
-"Create user.","Create a normal user.","SUCCESS","2022-10-17T01:05:22.603412Z[Etc/UTC]","0.0","9.75"
-"Create user.","Try to create a user without data.","SUCCESS","2022-10-17T01:05:32.385238Z[Etc/UTC]","0.0","1.14"

@@ -1,5 +1,0 @@
-"Story","Title","Result","Date","Stability","Duration (s)"
-"Delete user.","Delete an user - App-id not exists in header configuration.","SUCCESS","2022-10-17T02:47:50.860794Z[Etc/UTC]","0.0","0.44"
-"Delete user.","Delete a user with an invalid identification.","SUCCESS","2022-10-17T02:47:52.798953Z[Etc/UTC]","0.0","0.62"
-"Delete user.","Try to delete some user without user identification.","SUCCESS","2022-10-17T02:47:54.975619Z[Etc/UTC]","0.0","0.61"
-"Search user.","Search all users.","SUCCESS","2022-10-17T02:47:55.605958Z[Etc/UTC]","0.0","0.85"

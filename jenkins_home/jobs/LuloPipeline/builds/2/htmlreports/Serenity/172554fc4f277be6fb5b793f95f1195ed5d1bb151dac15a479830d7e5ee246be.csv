@@ -1,3 +1,0 @@
-"Story","Title","Result","Date","Stability","Duration (s)"
-"Delete user.","Delete an user.","SUCCESS","2022-10-17T01:05:33.550105Z[Etc/UTC]","0.0","2.88"
-"Delete user.","Delete a user with an identification deleted previously.","SUCCESS","2022-10-17T01:05:38.42074Z[Etc/UTC]","0.0","2.9"
