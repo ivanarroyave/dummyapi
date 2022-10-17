@@ -1,6 +1,10 @@
 pipeline {
     agent any
 	
+	environment {
+		NOMBRE_PROYECTO = "dummyapi";
+    }
+	
 	tools { 
         maven 'Maven 3.8.6' 
     }
