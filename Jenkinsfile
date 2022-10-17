@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        any
-    }
+    agent any
 	
 	options {
 		// Keep the 10 most recent builds
