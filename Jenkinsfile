@@ -16,6 +16,15 @@ pipeline {
             steps {		
 				dir("${env.WORKSPACE}/dummyapi"){
 					sh "mvn clean test -Dtest=AnExampleOfGeneralExecutorOfTest serenity:aggregate"
+					
+					 publishHTML(target: [
+						reportName : 'Serenity bdd report',
+						reportDir:   'dummyapi/target/site/serenity',
+						reportFiles: 'index.html',
+						keepAll:     true,
+						alwaysLinkToLastBuild: true,
+						allowMissing: false
+					])
 				}
 			}
 			post {
