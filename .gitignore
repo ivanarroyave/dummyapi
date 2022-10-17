@@ -41,4 +41,5 @@ hs_err_pid*
 */target/
 
 #Jenkins
-*/jenkins_home
+*/jenkins_home/
+/jenkins_home/

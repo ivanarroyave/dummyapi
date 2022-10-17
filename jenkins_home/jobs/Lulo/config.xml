@@ -14,7 +14,7 @@
       <configVersion>2</configVersion>
       <userRemoteConfigs>
         <hudson.plugins.git.UserRemoteConfig>
-          <url>/home/Downloads/dummyapi</url>
+          <url>https://gitlab.com/ID2A/dummyapi.git</url>
         </hudson.plugins.git.UserRemoteConfig>
       </userRemoteConfigs>
       <branches>
