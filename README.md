@@ -1,14 +1,12 @@
 ﻿# Automatización de servicios - Dummy API
 
-_A continuación se explicara la composición y consideraciones necesarias para interactuar por medio de automatizaciones con Dimmy API._
+A continuación se explicara la composición y consideraciones necesarias para interactuar por medio de automatizaciones con Dimmy API.
 
 ## Comenzando
 
-_En este proyecto se pondrá en práctica conocimientos para automatizaciones de pruebas aplicadas a servicios y además, la ejecución de las pruebas por medio de Jenkins, el cual estará en un contenedor de Docker._
+En este proyecto se pondrá en práctica conocimientos para automatizaciones de pruebas aplicadas a servicios y además, la ejecución de las pruebas por medio de Jenkins, el cual estará en un contenedor de Docker.
 
-_Este proyecto ilustra cómo trabajar con el patrón de automatización Screenplay bajo el framework de automatización llamado Serenity BDD: https://serenity-bdd.info/._
-
-
+Este proyecto ilustra cómo trabajar con el patrón de automatización Screenplay bajo el framework de automatización llamado Serenity BDD: https://serenity-bdd.info/.
 
 ### Pre-requisitos
 
