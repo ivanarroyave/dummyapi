@@ -1,18 +1,18 @@
-# Automatizaci¨®n de servicios - Dummy API
+# AutomatizaciÂ¨Â®n de servicios - Dummy API
 
-_A continuaci¨®n se explicara la composici¨®n y consideraciones necesarias para interactuar por medio de automatizaciones con Dimmy API._
+_A continuaciÂ¨Â®n se explicara la composiciÂ¨Â®n y consideraciones necesarias para interactuar por medio de automatizaciones con Dimmy API._
 
 ## Comenzando ??
 
-_En este proyecto se pondr¨¢ en pr¨¢ctica conocimientos para automatizaciones de pruebas aplicadas a servicios y adem¨¢s, la ejecuci¨®n de las pruebas por medio de Jenkins, el cual estar¨¢ en un contenedor de Docker._
+_En este proyecto se pondrÂ¨Â¢ en prÂ¨Â¢ctica conocimientos para automatizaciones de pruebas aplicadas a servicios y ademÂ¨Â¢s, la ejecuciÂ¨Â®n de las pruebas por medio de Jenkins, el cual estarÂ¨Â¢ en un contenedor de Docker._
 
-_Este proyecto ilustra c¨®mo trabajar con el patr¨®n de automatizaci¨®n Screenplay bajo el framework de automatizaci¨®n llamado Serenity BDD: https://serenity-bdd.info/._
+_Este proyecto ilustra cÂ¨Â®mo trabajar con el patrÂ¨Â®n de automatizaciÂ¨Â®n Screenplay bajo el framework de automatizaciÂ¨Â®n llamado Serenity BDD: https://serenity-bdd.info/._
 
 
 
 ### Pre-requisitos ??
 
-_Todo el proceso de ejecuci¨®n de pruebas se har¨¢ localmente. As¨ª que ten presente los siguientes pre-requisitos para tener una buena experiencia de replicaci¨®n. Adem¨¢s, si no se indica una versi¨®n para alguna herramienta pues deber¨¢s asegurar la versi¨®n m¨¢s reciente._
+_Todo el proceso de ejecuciÂ¨Â®n de pruebas se harÂ¨Â¢ localmente. AsÂ¨Âª que ten presente los siguientes pre-requisitos para tener una buena experiencia de replicaciÂ¨Â®n. AdemÂ¨Â¢s, si no se indica una versiÂ¨Â®n para alguna herramienta pues deberÂ¨Â¢s asegurar la versiÂ¨Â®n mÂ¨Â¢s reciente._
 ```
 Java 8+
 InteliJ IDEA (plugins: Gherkin; Cucumber for Java; Substeps Intellij plugin, Maven)
@@ -21,7 +21,7 @@ Git
 Doker
 ```
 
-### Adecuaci¨®n local del proyecto de automatizaci¨®n ??
+### AdecuaciÂ¨Â®n local del proyecto de automatizaciÂ¨Â®n ??
 
 _Antes que nada, debes clonar el repositorio en tu equipo. Y si, eso es todo ya que se supone que dispones de los pre-requisitos._
 
@@ -31,11 +31,11 @@ git clone https://gitlab.com/ID2A/dummyapi.git
 ```
 
 
-_Una vez hecho, ver¨¢s la carpeta "dummyapi" la cual se gener¨® por la clonaci¨®n del repositorio; a su vez contiene, el proyecto de automatizaci¨®n est¨¢ dentro de otra carpeta tambi¨¦n llamada "dummyapi"._
+_Una vez hecho, verÂ¨Â¢s la carpeta "dummyapi" la cual se generÂ¨Â® por la clonaciÂ¨Â®n del repositorio; a su vez contiene, el proyecto de automatizaciÂ¨Â®n estÂ¨Â¢ dentro de otra carpeta tambiÂ¨Â¦n llamada "dummyapi"._
 
 ## Ejecutando las pruebas ??
 
-_Primero deber¨¢s abrir el proyecto de automatizaci¨®n:_
+_Primero deberÂ¨Â¢s abrir el proyecto de automatizaciÂ¨Â®n:_
 * Haga clic en Archivo > Abrir.
 * Navegue hasta el archivo pom.xml del proyecto.
 * Haga clic en Aceptar.
@@ -61,14 +61,14 @@ _Existen dos runner adicionales que representan una Suite de runners. Uno con Cu
 
 ### Ejecute localmente las pruebas y genere un reporte de pruebas ??
 
-_Para ejecutar las pruebas deber¨¢ hacerlo desde una consola o terminal. Navegue hasta donde se encuentre el archivo pom.xml. Ahora, desde la consola:_
+_Para ejecutar las pruebas deberÂ¨Â¢ hacerlo desde una consola o terminal. Navegue hasta donde se encuentre el archivo pom.xml. Ahora, desde la consola:_
 
 _Primero: limpie el proyecto de archivos temporales._
 ```
 mvn clean
 ```
 
-_Segundo: ejecute una o varias pruebas. Para la ejecuci¨®n de pruebas el comando es diverso. Veamos un ejemplo para ejecutar un runner espec¨ªfico; ser¨¢ el Suite con CucumberWithSerenity. La idea de este formato es ejecutar todos los escenarios deseados desde una Suite._
+_Segundo: ejecute una o varias pruebas. Para la ejecuciÂ¨Â®n de pruebas el comando es diverso. Veamos un ejemplo para ejecutar un runner especÂ¨Âªfico; serÂ¨Â¢ el Suite con CucumberWithSerenity. La idea de este formato es ejecutar todos los escenarios deseados desde una Suite._
 ```
 mvn test -Dtest=AnExampleOfGeneralExecutorOfTest
 ```
@@ -83,18 +83,18 @@ _Para generar el reporte de pruebas. El reporte se genera normalmente en la ruta
 mvn serenity:aggregate
 ```
 
-_Tambien se puede ejecutar todo desde una sola l¨ªnea._
+_Tambien se puede ejecutar todo desde una sola lÂ¨Âªnea._
 ```
 mvn clean test -Dtest=AnExampleOfGeneralExecutorOfTest serenity:aggregate
 ```
 
 ### Ejecute localmente las pruebas y genere un reporte de pruebas desde un contenedor de Docker con una imagen de Jenkins??
-_De antemano ten presente que nos va a interesar guardar las configuraciones de Jenkins en un volumen de Docker externo al contenedor. Una vez que se configure Jenkins no queremos repetir el proceso una y otras vez si por alguna raz¨®n perdemos el contenedor. Mejor tenerlo a la mano para reusar las configuraciones de Jenkins (plugins instalados, pipelines configurados, usuarios, etc.) en un nuevo contenedor._
+_De antemano ten presente que nos va a interesar guardar las configuraciones de Jenkins en un volumen de Docker externo al contenedor. Una vez que se configure Jenkins no queremos repetir el proceso una y otras vez si por alguna razÂ¨Â®n perdemos el contenedor. Mejor tenerlo a la mano para reusar las configuraciones de Jenkins (plugins instalados, pipelines configurados, usuarios, etc.) en un nuevo contenedor._
 
-#### Ejecuci¨®n dede una imagen de Docker ?
-* Crea una carpeta por fuera del proyecto llamada "jenkins_home". Yo la crear¨¦ en la carpeta Downloads. En dicha carpeta quedar¨¢n todas las configuraciones que se har¨¢n en Jenkins.
-* Crea un Dockerfile en la ra¨ªz del proyecto de automatizaci¨®n (donde est¨¢ el archivo README.md y otros). Usa el block de notas o una herramienta similar para editar. Al final nos interesa tener un archivo que sin extensi¨®n tendr¨¢ el nombre de "Dockerfile".
-* Dentro del archivo Dockerfile tendremos la siguiente configuraci¨®n:
+#### EjecuciÂ¨Â®n dede una imagen de Docker ?
+* Crea una carpeta por fuera del proyecto llamada "jenkins_home". Yo la crearÂ¨Â¦ en la carpeta Downloads. En dicha carpeta quedarÂ¨Â¢n todas las configuraciones que se harÂ¨Â¢n en Jenkins.
+* Crea un Dockerfile en la raÂ¨Âªz del proyecto de automatizaciÂ¨Â®n (donde estÂ¨Â¢ el archivo README.md y otros). Usa el block de notas o una herramienta similar para editar. Al final nos interesa tener un archivo que sin extensiÂ¨Â®n tendrÂ¨Â¢ el nombre de "Dockerfile".
+* Dentro del archivo Dockerfile tendremos la siguiente configuraciÂ¨Â®n:
 ```
 FROM jenkins/jenkins:latest
 MAINTAINER dario696 ddario696@gmail.com
@@ -104,17 +104,17 @@ RUN apt install maven -y
 EXPOSE 8080
 ```
 
-* Para crear la imagen en Docker debes abrir la l¨ªnea de comandos y ubicarte donde est¨¢ el Dockerfile. Ejecuta el siguiente comando.
+* Para crear la imagen en Docker debes abrir la lÂ¨Âªnea de comandos y ubicarte donde estÂ¨Â¢ el Dockerfile. Ejecuta el siguiente comando.
 ```
 docker build -t jenkins_ci_blueocean .
 ```
 
-* Cuando el proceso de la consola termine podr¨¢s comprobar que se ha creado una imagen con el nombre "jenkins_ci_blueocean". Usa el sieguiente comando para listar las imagenes de Docker.
+* Cuando el proceso de la consola termine podrÂ¨Â¢s comprobar que se ha creado una imagen con el nombre "jenkins_ci_blueocean". Usa el sieguiente comando para listar las imagenes de Docker.
 ```
 docker images
 ```
 
-* Ahora se procede con la creaci¨®n del contenedor.
+* Ahora se procede con la creaciÂ¨Â®n del contenedor.
 ```
 docker run -p 8080:8080 --name dummyapi -d -v C:/Users/pc/Downloads/jenkins_home:/var/jenkins_home jenkins_ci_blueocean
 ```
@@ -129,24 +129,24 @@ docker container ls
 docker exec -it dummyapi bash
 ```
 
-* Una vez adentro del contenedor podr¨ªas ejecutar un comando. Por ejemplo verifica la versi¨®n de Java o de Maven.
+* Una vez adentro del contenedor podrÂ¨Âªas ejecutar un comando. Por ejemplo verifica la versiÂ¨Â®n de Java o de Maven.
 ```
 java -version
 mvn -version
 ```
 
-* A estas alturas si abres el navegador web y en la barra de direcci¨®n pones "http://localhost:8080/" ver¨¢s que Jenkin se mostrar¨¢ y pedir¨¢ un password. Usa el modo interactivo para usar el siguiente comando (el c¨®digo lo debes poner donde dice "Administrator password", luego das en continuar):
+* A estas alturas si abres el navegador web y en la barra de direcciÂ¨Â®n pones "http://localhost:8080/" verÂ¨Â¢s que Jenkin se mostrarÂ¨Â¢ y pedirÂ¨Â¢ un password. Usa el modo interactivo para usar el siguiente comando (el cÂ¨Â®digo lo debes poner donde dice "Administrator password", luego das en continuar):
 ```
 cat /var/jenkins_home/secrets/initialAdminPassword
 ```
 
-* Jenkins ofrece dos opciones de instalaci¨®n de plugins. Escoge los plugins sugeridos. Espera a que finalice la instalaci¨®n de plugins. Continue con la creaci¨®n de un usuario administrador. Guarde la configuraci¨®n por defecto de la url de Jenkins y finalice. Reinicie Jenkins si es necesario.
+* Jenkins ofrece dos opciones de instalaciÂ¨Â®n de plugins. Escoge los plugins sugeridos. Espera a que finalice la instalaciÂ¨Â®n de plugins. Continue con la creaciÂ¨Â®n de un usuario administrador. Guarde la configuraciÂ¨Â®n por defecto de la url de Jenkins y finalice. Reinicie Jenkins si es necesario.
 
 * Instale los siguientes plugins: HTML Publisher; Pipeline Maven Integration.
 
-* Cree un pipeline. El nombre queda a su elecci¨®n. En la secci¨®n llamada _Pipeline_: la definici¨®n del pipeline debe ser _Pipeline script from SCM_; en el campo _SCM_ escoge la opci¨®n _Git_; en el campo _Repository URL_ pon la url del repositorio que es _https://gitlab.com/ID2A/dummyapi.git_; en la secci¨®n que se llama _Branch Specifier (blank for 'any')_ indica la rama que ser¨¢ la referencia para que se ejecute el pipeline, para este caso pon _*/main_. Finalmente aplica los cambios y guarda el pipeline.
+* Cree un pipeline. El nombre queda a su elecciÂ¨Â®n. En la secciÂ¨Â®n llamada _Pipeline_: la definiciÂ¨Â®n del pipeline debe ser _Pipeline script from SCM_; en el campo _SCM_ escoge la opciÃ³n _Git_; en el campo _Repository URL_ pon la url del repositorio que es _https://github.com/ivanarroyave/dummyapi.git_; en la secciÂ¨Â®n que se llama _Branch Specifier (blank for 'any')_ indica la rama que serÂ¨Â¢ la referencia para que se ejecute el pipeline, para este caso pon _*/main_. Finalmente aplica los cambios y guarda el pipeline.
 
-* En la ra¨ªz del proyecto existe un archivo llamado "Jenkinsfile". Dicho archivo contiene una serie de instrucciones en formato declarativo para que se ejecte el pipeline como c¨®digo y adem¨¢s se sincroniza con el pipeline creado en Jenkins en pasos previos. Dale un vistazo al contenido:
+* En la raÂ¨Âªz del proyecto existe un archivo llamado "Jenkinsfile". Dicho archivo contiene una serie de instrucciones en formato declarativo para que se ejecte el pipeline como cÂ¨Â®digo y ademÂ¨Â¢s se sincroniza con el pipeline creado en Jenkins en pasos previos. Dale un vistazo al contenido:
 ```
 pipeline {
     agent any
@@ -183,24 +183,24 @@ pipeline {
 
 ```
 
-* Para este caso el pipeline necesita Maven 3.8.6. La imagen usada para Docker no la tienen por defecto. Puedes gestionar dicha versi¨®n con Jenkins instalandola desde la administraci¨®n de Jenkins y bajo las configuraciones globales de herramientas. En el apartado de Maven instala la versi¨®n necesaitada.
+* Para este caso el pipeline necesita Maven 3.8.6. La imagen usada para Docker no la tienen por defecto. Puedes gestionar dicha versiÂ¨Â®n con Jenkins instalandola desde la administraciÂ¨Â®n de Jenkins y bajo las configuraciones globales de herramientas. En el apartado de Maven instala la versiÂ¨Â®n necesaitada.
 
-* Ahora si, finalmente podr¨¢s ejecutar lelos pipeline. Ingres al pipeline y acciona la opci¨®n _Construir ahora_ todas las veces que lo necesites.
+* Ahora si, finalmente podrÂ¨Â¢s ejecutar lelos pipeline. Ingres al pipeline y acciona la opciÂ¨Â®n _Construir ahora_ todas las veces que lo necesites.
 
 
 ## Autores ??
 
-* **Iv¨¢n Dar¨ªo Arroyave Arboleda** - *Ingeniero de sistemas de informaci¨®n - Especializado en el aseguramiento de la calidad del software* - [ID2A](https://gitlab.com/ID2A)
+* **IvÂ¨Â¢n DarÂ¨Âªo Arroyave Arboleda** - *Ingeniero de sistemas de informaciÂ¨Â®n - Especializado en el aseguramiento de la calidad del software* - [ivanarroyave](https://github.com/ivanarroyave)
 
 ## Expresiones de Gratitud ??
 
 * Comenta a otros sobre este proyecto ??
-* Invita una cerveza ?? o un caf¨¦ ? a alguien del equipo. 
-* Da las gracias p¨²blicamente ??.
+* Invita una cerveza ?? o un cafÂ¨Â¦ ? a alguien del equipo. 
+* Da las gracias pÂ¨Â²blicamente ??.
 
 * etc.
 
 
 
 ---
-?? con ?? por [Iv¨¢n Dar¨ªo Arroyave Arboleda](https://gitlab.com/ID2A) ??
+?? con ?? por [IvÂ¨Â¢n DarÂ¨Âªo Arroyave Arboleda](https://github.com/ivanarroyave) ??
