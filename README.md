@@ -1,4 +1,4 @@
-# Automatizaci¨®n de servicios - Dummy API
+﻿# Automatizaci¨®n de servicios - Dummy API
 
 _A continuaci¨®n se explicara la composici¨®n y consideraciones necesarias para interactuar por medio de automatizaciones con Dimmy API._
 
