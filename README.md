@@ -104,17 +104,17 @@ EXPOSE 8080
 
 * Para crear la imagen en Docker debes abrir la línea de comandos y ubicarte donde está el Dockerfile. Ejecuta el siguiente comando.
 ```
-docker build -t jenkins_ci_blueocean .
+docker build -t jenkins_lulado .
 ```
 
-* Cuando el proceso de la consola termine podrás comprobar que se ha creado una imagen con el nombre "jenkins_ci_blueocean". Usa el sieguiente comando para listar las imagenes de Docker.
+* Cuando el proceso de la consola termine podrás comprobar que se ha creado una imagen con el nombre "jenkins_lulado". Usa el sieguiente comando para listar las imagenes de Docker.
 ```
 docker images
 ```
 
 * Ahora se procede con la creación del contenedor.
 ```
-docker run -p 8080:8080 --name dummyapi -d -v C:/Users/pc/Downloads/jenkins_home:/var/jenkins_home jenkins_ci_blueocean
+docker run -p 8080:8080 --name dummyapi -d -v C:/Users/pc/Downloads/jenkins_home:/var/jenkins_home jenkins_lulado
 ```
 
 * Ahora puedes buscar tu contenedor. Para listar los contenedores creados usa el siguiente comando:
