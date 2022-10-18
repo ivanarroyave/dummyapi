@@ -10,7 +10,7 @@ Este proyecto ilustra cómo trabajar con el patrón de automatización Screenpla
 
 ### Pre-requisitos
 
-_Todo el proceso de ejecución de pruebas se hará localmente. Ten presente los siguientes pre-requisitos para tener una buena experiencia de replicación. Además, si no se indica una versión para alguna herramienta pues deberás asegurar la versión más reciente._
+Todo el proceso de ejecución de pruebas se hará localmente. Ten presente los siguientes pre-requisitos para tener una buena experiencia de replicación. Además, si no se indica una versión para alguna herramienta pues deberás asegurar la versión más reciente.
 ```
 Java 8+
 InteliJ IDEA (plugins: Gherkin; Cucumber for Java; Substeps Intellij plugin, Maven)
@@ -21,7 +21,7 @@ Doker
 
 ### Adecuación local del proyecto de automatización
 
-_Antes que nada, debes clonar el repositorio en tu equipo. Y si, eso es todo ya que se supone que dispones de los pre-requisitos._
+Antes que nada, debes clonar el repositorio en tu equipo. Y si, eso es todo ya que se supone que dispones de los pre-requisitos.
 
 
 ```
@@ -29,21 +29,21 @@ git clone https://github.com/ivanarroyave/dummyapi.git
 ```
 
 
-_Una vez hecho, verás la carpeta "dummyapi" la cual se generó por la clonación del repositorio; a su vez contiene, el proyecto de automatización está dentro de otra carpeta también llamada "dummyapi"._
+Una vez hecho, verás la carpeta "dummyapi" la cual se generó por la clonación del repositorio; a su vez contiene, el proyecto de automatización está dentro de otra carpeta también llamada "dummyapi".
 
 ## Ejecutando las pruebas
 
-_Primero deberás abrir el proyecto de automatización:_
+Primero deberás abrir el proyecto de automatización:
 * Haga clic en Archivo > Abrir.
 * Navegue hasta el archivo pom.xml del proyecto.
 * Haga clic en Aceptar.
 
 ### Analice las pruebas
 
-_Las pruebas en este proyecto se basan en las funcionaliadaes descritas en https://dummyapi.io/docs/user y https://dummyapi.io/docs/errors._
-_Se han automatizado un todal de 11 escenarios de pruebas entre rutas ideales y alternas. Las descripciones de los Features y sus respectivos Scenarios las puede encontrar en la ruta: "src/test/resources/features/user"._
+Las pruebas en este proyecto se basan en las funcionaliadaes descritas en https://dummyapi.io/docs/user y https://dummyapi.io/docs/errors.
+Se han automatizado un todal de 11 escenarios de pruebas entre rutas ideales y alternas. Las descripciones de los Features y sus respectivos Scenarios las puede encontrar en la ruta: "src/test/resources/features/user".
 
-_Por cada Feature existe una clase runner en la ruta "src/test/java/io/dummyapi/runners/"._
+Por cada Feature existe una clase runner en la ruta "src/test/java/io/dummyapi/runners/".
 ```
 * CreateUserRunner.
 * DeleteUserRunner.
@@ -51,7 +51,7 @@ _Por cada Feature existe una clase runner en la ruta "src/test/java/io/dummyapi/
 * UpdateUserRunner.
 ```
 
-_Existen dos runner adicionales que representan una Suite de runners. Uno con Cucumber con Serenity y otro con Junit._
+Existen dos runner adicionales que representan una Suite de runners. Uno con Cucumber con Serenity y otro con Junit.
 ```
 * AnExampleOfGeneralExecutorOfTest. Forma de Suite con CucumberWithSerenity.
 * DeleteUserRunner. Forma de Suite con Junit.
@@ -59,35 +59,35 @@ _Existen dos runner adicionales que representan una Suite de runners. Uno con Cu
 
 ### Ejecute localmente las pruebas y genere un reporte de pruebas
 
-_Para ejecutar las pruebas deberá hacerlo desde una consola o terminal. Navegue hasta donde se encuentre el archivo pom.xml. Ahora, desde la consola:_
+Para ejecutar las pruebas deberá hacerlo desde una consola o terminal. Navegue hasta donde se encuentre el archivo pom.xml. Ahora, desde la consola:
 
-_Primero: limpie el proyecto de archivos temporales._
+Limpie el proyecto de archivos temporales.
 ```
 mvn clean
 ```
 
-_Segundo: ejecute una o varias pruebas. Para la ejecución de pruebas el comando es diverso. Veamos un ejemplo para ejecutar un runner específico; será el Suite con CucumberWithSerenity. La idea de este formato es ejecutar todos los escenarios deseados desde una Suite._
+Ejecute una o varias pruebas. Para la ejecución de pruebas el comando es diverso. Veamos un ejemplo para ejecutar un runner específico; será el Suite con CucumberWithSerenity. La idea de este formato es ejecutar todos los escenarios deseados desde una Suite.
 ```
 mvn test -Dtest=AnExampleOfGeneralExecutorOfTest
 ```
 
-_Si desea ejecutar TODAS las pruebas use el siguiente comando:_
+Si desea ejecutar TODAS las pruebas use el siguiente comando:
 ```
 mvn verify
 ```
 
-_Para generar el reporte de pruebas. El reporte se genera normalmente en la ruta "./dummyapi/target/site/serenity/index.html". Para verlo, debe abrir el archivo "index.html"._
+Para generar el reporte de pruebas. El reporte se genera normalmente en la ruta "./dummyapi/target/site/serenity/index.html". Para verlo, debe abrir el archivo "index.html".
 ```
 mvn serenity:aggregate
 ```
 
-_Tambien se puede ejecutar todo desde una sola línea._
+Tambien se puede ejecutar todo desde una sola línea.
 ```
 mvn clean test -Dtest=AnExampleOfGeneralExecutorOfTest serenity:aggregate
 ```
 
 ### Ejecute localmente las pruebas y genere un reporte de pruebas desde un contenedor de Docker con una imagen de Jenkins
-_De antemano ten presente que nos va a interesar guardar las configuraciones de Jenkins en un volumen de Docker externo al contenedor. Una vez que se configure Jenkins no queremos repetir el proceso una y otras vez si por alguna razón perdemos el contenedor. Mejor tenerlo a la mano para reusar las configuraciones de Jenkins (plugins instalados, pipelines configurados, usuarios, etc.) en un nuevo contenedor._
+De antemano ten presente que nos va a interesar guardar las configuraciones de Jenkins en un volumen de Docker externo al contenedor. Una vez que se configure Jenkins no queremos repetir el proceso una y otras vez si por alguna razón perdemos el contenedor. Mejor tenerlo a la mano para reusar las configuraciones de Jenkins (plugins instalados, pipelines configurados, usuarios, etc.) en un nuevo contenedor.
 
 #### Ejecución dede una imagen de Docker
 * Crea una carpeta por fuera del proyecto llamada "jenkins_home". Yo la crearé en la carpeta Downloads. En dicha carpeta quedarán todas las configuraciones que se harán en Jenkins.
