@@ -1,16 +1,16 @@
 ﻿# Automatización de servicios - Dummy API
 
-A continuación se explicara la composición y consideraciones necesarias para interactuar por medio de automatizaciones con Dimmy API.
+A continuación, se explicará la composición y consideraciones necesarias para interactuar por medio de automatizaciones con Dimmy API.
 
 ## Comenzando
 
-En este proyecto se pondrá en práctica conocimientos para automatizaciones de pruebas aplicadas a servicios y además, la ejecución de las pruebas por medio de Jenkins, el cual estará en un contenedor de Docker.
+En este proyecto se pondrá en práctica conocimientos para automatizaciones de pruebas aplicadas a servicios y, además, la ejecución de las pruebas por medio de Jenkins, el cual estará en un contenedor de Docker.
 
 Este proyecto ilustra cómo trabajar con el patrón de automatización Screenplay bajo el framework de automatización llamado Serenity BDD: https://serenity-bdd.info/.
 
-### Pre-requisitos
+### Prerrequisitos
 
-Todo el proceso de ejecución de pruebas se hará localmente. Ten presente los siguientes pre-requisitos para tener una buena experiencia de replicación. Además, si no se indica una versión para alguna herramienta pues deberás asegurar la versión más reciente.
+Todo el proceso de ejecución de pruebas se hará localmente. Ten presente los siguientes prerrequisitos para tener una buena experiencia de replicación. Además, si no se indica una versión para alguna herramienta pues deberás asegurar la versión más reciente.
 ```
 Java 8+
 InteliJ IDEA (plugins: Gherkin; Cucumber for Java; Substeps Intellij plugin, Maven)
@@ -21,7 +21,7 @@ Doker
 
 ### Adecuación local del proyecto de automatización
 
-Antes que nada, debes clonar el repositorio en tu equipo. Y si, eso es todo ya que se supone que dispones de los pre-requisitos.
+Antes que nada, debes clonar el repositorio en tu equipo. Y si, eso es todo ya que se supone que dispones de los prerrequisitos.
 
 
 ```
@@ -40,8 +40,8 @@ Primero deberás abrir el proyecto de automatización:
 
 ### Analice las pruebas
 
-Las pruebas en este proyecto se basan en las funcionaliadaes descritas en https://dummyapi.io/docs/user y https://dummyapi.io/docs/errors.
-Se han automatizado un todal de 11 escenarios de pruebas entre rutas ideales y alternas. Las descripciones de los Features y sus respectivos Scenarios las puede encontrar en la ruta: "src/test/resources/features/user".
+Las pruebas en este proyecto se basan en las funcionalidades descritas en https://dummyapi.io/docs/user y https://dummyapi.io/docs/errors.
+Se han automatizado un total de 11 escenarios de pruebas entre rutas ideales y alternas. Las descripciones de los Features y sus respectivos Scenarios las puede encontrar en la ruta: "src/test/resources/features/user".
 
 Por cada Feature existe una clase runner en la ruta "src/test/java/io/dummyapi/runners/".
 ```
@@ -51,7 +51,7 @@ Por cada Feature existe una clase runner en la ruta "src/test/java/io/dummyapi/r
 * UpdateUserRunner.
 ```
 
-Existen dos runner adicionales que representan una Suite de runners. Uno con Cucumber con Serenity y otro con Junit.
+Existen dos runners adicionales que representan una Suite de runners. Uno con Cucumber con Serenity y otro con Junit.
 ```
 * AnExampleOfGeneralExecutorOfTest. Forma de Suite con CucumberWithSerenity.
 * DeleteUserRunner. Forma de Suite con Junit.
@@ -81,13 +81,13 @@ Para generar el reporte de pruebas. El reporte se genera normalmente en la ruta 
 mvn serenity:aggregate
 ```
 
-Tambien se puede ejecutar todo desde una sola línea.
+También se puede ejecutar todo desde una sola línea.
 ```
 mvn clean test -Dtest=AnExampleOfGeneralExecutorOfTest serenity:aggregate
 ```
 
 ### Ejecute localmente las pruebas y genere un reporte de pruebas desde un contenedor de Docker con una imagen de Jenkins
-De antemano ten presente que nos va a interesar guardar las configuraciones de Jenkins en un volumen de Docker externo al contenedor. Una vez que se configure Jenkins no queremos repetir el proceso una y otras vez si por alguna razón perdemos el contenedor. Mejor tenerlo a la mano para reusar las configuraciones de Jenkins (plugins instalados, pipelines configurados, usuarios, etc.) en un nuevo contenedor.
+De antemano ten presente que nos va a interesar guardar las configuraciones de Jenkins en un volumen de Docker externo al contenedor. Una vez que se configure Jenkins no queremos repetir el proceso una y otra vez si por alguna razón perdemos el contenedor. Mejor tenerlo a la mano para reusar las configuraciones de Jenkins (plugin instalados, pipelines configurados, usuarios, etc.) en un nuevo contenedor.
 
 #### Ejecución dede una imagen de Docker
 * Crea una carpeta por fuera del proyecto llamada "jenkins_home". Yo la crearé en la carpeta Downloads. En dicha carpeta quedarán todas las configuraciones que se harán en Jenkins.
@@ -107,7 +107,7 @@ EXPOSE 8080
 docker build -t jenkins_lulado .
 ```
 
-* Cuando el proceso de la consola termine podrás comprobar que se ha creado una imagen con el nombre "jenkins_lulado". Usa el sieguiente comando para listar las imagenes de Docker.
+* Cuando el proceso de la consola termine podrás comprobar que se ha creado una imagen con el nombre "jenkins_lulado". Usa el siguiente comando para listar las imágenes de Docker.
 ```
 docker images
 ```
@@ -133,18 +133,18 @@ java -version
 mvn -version
 ```
 
-* A estas alturas si abres el navegador web y en la barra de dirección pones "http://localhost:8080/" verás que Jenkin se mostrará y pedirá un password. Usa el modo interactivo para usar el siguiente comando (el código lo debes poner donde dice "Administrator password", luego das en continuar):
+* A estas alturas si abres el navegador web y en la barra de dirección pones "http://localhost:8080/" verás que Jenkin se mostrará y pedirá una contraseña. Usa el modo interactivo para usar el siguiente comando (el código lo debes poner donde dice "Administrator password", luego das en continuar):
 ```
 cat /var/jenkins_home/secrets/initialAdminPassword
 ```
 
-* Jenkins ofrece dos opciones de instalación de plugins. Escoge los plugins sugeridos. Espera a que finalice la instalación de plugins. Continue con la creación de un usuario administrador. Guarde la configuración por defecto de la url de Jenkins y finalice. Reinicie Jenkins si es necesario.
+* Jenkins ofrece dos opciones de instalación de plugin. Escoge los plugin sugeridos. Espera a que finalice la instalación de plugin. Continue con la creación de un usuario administrador. Guarde la configuración por defecto de la url de Jenkins y finalice. Reinicie Jenkins si es necesario.
 
-* Instale los siguientes plugins: HTML Publisher; Pipeline Maven Integration.
+* Instale los siguientes plugin: HTML Publisher; Pipeline Maven Integration.
 
 * Cree un pipeline. El nombre queda a su elección. En la sección llamada _Pipeline_: la definición del pipeline debe ser _Pipeline script from SCM_; en el campo _SCM_ escoge la opción _Git_; en el campo _Repository URL_ pon la url del repositorio que es _https://github.com/ivanarroyave/dummyapi.git_; en la sección que se llama _Branch Specifier (blank for 'any')_ indica la rama que será la referencia para que se ejecute el pipeline, para este caso pon _*/main_. Finalmente aplica los cambios y guarda el pipeline.
 
-* En la raíz del proyecto existe un archivo llamado "Jenkinsfile". Dicho archivo contiene una serie de instrucciones en formato declarativo para que se ejecte el pipeline como código y además se sincroniza con el pipeline creado en Jenkins en pasos previos. Dale un vistazo al contenido:
+* En la raíz del proyecto existe un archivo llamado "Jenkinsfile". Dicho archivo contiene una serie de instrucciones en formato declarativo para que se ejecute el pipeline como código y además se sincroniza con el pipeline creado en Jenkins en pasos previos. Dale un vistazo al contenido:
 ```
 pipeline {
     agent any
@@ -181,7 +181,7 @@ pipeline {
 
 ```
 
-* Para este caso el pipeline necesita Maven 3.8.6. La imagen usada para Docker no la tienen por defecto. Puedes gestionar dicha versión con Jenkins instalandola desde la administración de Jenkins y bajo las configuraciones globales de herramientas. En el apartado de Maven instala la versión necesaitada.
+* Para este caso el pipeline necesita Maven 3.8.6. La imagen usada para Docker no la tienen por defecto. Puedes gestionar dicha versión con Jenkins instalándola desde la administración de Jenkins y bajo las configuraciones globales de herramientas. En el apartado de Maven instala la versión necesitada.
 
 * Ahora si, finalmente podrás ejecutar lelos pipeline. Ingres al pipeline y acciona la opción _Construir ahora_ todas las veces que lo necesites.
 
